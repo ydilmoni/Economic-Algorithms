@@ -165,7 +165,7 @@ def elect_next_budget_item(
     for i in range(n):
         if chosen_project in votes[i]:
             old_balance = balances[i]
-            balances[i] -= missing_cost  # התומכים משלמים על הפרוייקט
+            balances[i] = 0.0  # התומכים משלמים על הפרוייקט
             detailed_log(f"  Citizen {i+1} (supporter): {old_balance:.2f} - {missing_cost:.2f} = {balances[i]:.2f}")
 
     #מחיקת הפרוייקט הנבחר מהמילון של העלויות ומרשימת ההצבעות

@@ -83,7 +83,7 @@ def elect_next_budget_item(
     # איפוס היתרות של התומכים של הפרוייקט שנבחר
     for i in range(n):
         if chosen_project in votes[i]:
-            balances[i] -= missing_cost  #  התומכים משלמים על רק על הפרוייקט והיתרה שלהם לא מתאפסת
+            balances[i] = 0.0
 
     #מחיקת הפרוייקט הנבחר מהמילון של העלויות ומרשימת ההצבעות
     del costs[chosen_project]
@@ -277,6 +277,7 @@ print(f"{'='*70}")
 ########################################################################################################
 
 """
+[Running] python -u "c:\Users\user\Documents\Computer Science\2026\סמסטר א\אלגוריתמים כלכליים\מטלות\Economic-Algorithms\EX7\EX7Q4.py"
 Example 1:
 Chosen project: B
 Amount added to each citizen: 0.50
@@ -339,13 +340,13 @@ Chosen project: Basketball_Courts
 Amount added to each citizen: 24800.00
 Citizen 1 has 24800.00 remaining balance.
 Citizen 2 has 0.00 remaining balance.
-Citizen 3 has 64000.00 remaining balance.
+Citizen 3 has 0.00 remaining balance.
 Citizen 4 has 24800.00 remaining balance.
-Citizen 5 has 64000.00 remaining balance.
+Citizen 5 has 0.00 remaining balance.
 Citizen 6 has 24800.00 remaining balance.
-Citizen 7 has 64000.00 remaining balance.
+Citizen 7 has 0.00 remaining balance.
 Citizen 8 has 88800.00 remaining balance.
-Citizen 9 has 64000.00 remaining balance.
+Citizen 9 has 0.00 remaining balance.
 Citizen 10 has 24800.00 remaining balance.
 After adding 24800.00 to each citizen, "Basketball_Courts" is chosen.
 
@@ -358,14 +359,14 @@ Chosen project: Dog_Park
 Amount added to each citizen: 37360.00
 Citizen 1 has 62160.00 remaining balance.
 Citizen 2 has 0.00 remaining balance.
-Citizen 3 has 101360.00 remaining balance.
-Citizen 4 has 24800.00 remaining balance.
-Citizen 5 has 101360.00 remaining balance.
-Citizen 6 has 24800.00 remaining balance.
-Citizen 7 has 101360.00 remaining balance.
-Citizen 8 has 88800.00 remaining balance.
-Citizen 9 has 101360.00 remaining balance.
-Citizen 10 has 24800.00 remaining balance.
+Citizen 3 has 37360.00 remaining balance.
+Citizen 4 has 0.00 remaining balance.
+Citizen 5 has 37360.00 remaining balance.
+Citizen 6 has 0.00 remaining balance.
+Citizen 7 has 37360.00 remaining balance.
+Citizen 8 has 0.00 remaining balance.
+Citizen 9 has 37360.00 remaining balance.
+Citizen 10 has 0.00 remaining balance.
 After adding 37360.00 to each citizen, "Dog_Park" is chosen.
 
 ======================================================================
@@ -375,18 +376,18 @@ Project Basketball_Courts has no supporters, or is already funded.
 Project Dog_Park has no supporters, or is already funded.
 Project Playground_East has no supporters, or is already funded.
 Chosen project: Skate_Park
-Amount added to each citizen: 8912.00
-Citizen 1 has 71072.00 remaining balance.
+Amount added to each citizen: 60112.00
+Citizen 1 has 122272.00 remaining balance.
 Citizen 2 has 0.00 remaining balance.
-Citizen 3 has 101360.00 remaining balance.
-Citizen 4 has 33712.00 remaining balance.
-Citizen 5 has 101360.00 remaining balance.
-Citizen 6 has 33712.00 remaining balance.
-Citizen 7 has 101360.00 remaining balance.
-Citizen 8 has 97712.00 remaining balance.
-Citizen 9 has 101360.00 remaining balance.
-Citizen 10 has 33712.00 remaining balance.
-After adding 8912.00 to each citizen, "Skate_Park" is chosen.
+Citizen 3 has 0.00 remaining balance.
+Citizen 4 has 60112.00 remaining balance.
+Citizen 5 has 0.00 remaining balance.
+Citizen 6 has 60112.00 remaining balance.
+Citizen 7 has 0.00 remaining balance.
+Citizen 8 has 60112.00 remaining balance.
+Citizen 9 has 0.00 remaining balance.
+Citizen 10 has 60112.00 remaining balance.
+After adding 60112.00 to each citizen, "Skate_Park" is chosen.
 
 ======================================================================
 Round 5
@@ -395,64 +396,64 @@ Project Basketball_Courts has no supporters, or is already funded.
 Project Dog_Park has no supporters, or is already funded.
 Project Playground_East has no supporters, or is already funded.
 Project Skate_Park has no supporters, or is already funded.
-Chosen project: Farmers_Market
-Amount added to each citizen: 21140.00
-Citizen 1 has 92212.00 remaining balance.
-Citizen 2 has 21140.00 remaining balance.
-Citizen 3 has 101360.00 remaining balance.
-Citizen 4 has 54852.00 remaining balance.
-Citizen 5 has 101360.00 remaining balance.
-Citizen 6 has 54852.00 remaining balance.
-Citizen 7 has 101360.00 remaining balance.
-Citizen 8 has 118852.00 remaining balance.
-Citizen 9 has 101360.00 remaining balance.
-Citizen 10 has 54852.00 remaining balance.
-After adding 21140.00 to each citizen, "Farmers_Market" is chosen.
+Chosen project: Urban_Garden
+Amount added to each citizen: 23478.40
+Citizen 1 has 0.00 remaining balance.
+Citizen 2 has 23478.40 remaining balance.
+Citizen 3 has 0.00 remaining balance.
+Citizen 4 has 0.00 remaining balance.
+Citizen 5 has 23478.40 remaining balance.
+Citizen 6 has 0.00 remaining balance.
+Citizen 7 has 23478.40 remaining balance.
+Citizen 8 has 83590.40 remaining balance.
+Citizen 9 has 23478.40 remaining balance.
+Citizen 10 has 0.00 remaining balance.
+After adding 23478.40 to each citizen, "Urban_Garden" is chosen.
 
 ======================================================================
 Round 6
 ======================================================================
 Project Basketball_Courts has no supporters, or is already funded.
 Project Dog_Park has no supporters, or is already funded.
-Project Farmers_Market has no supporters, or is already funded.
 Project Playground_East has no supporters, or is already funded.
 Project Skate_Park has no supporters, or is already funded.
-Chosen project: Urban_Garden
-Amount added to each citizen: 12374.40
-Citizen 1 has 92212.00 remaining balance.
-Citizen 2 has 33514.40 remaining balance.
-Citizen 3 has 101360.00 remaining balance.
-Citizen 4 has 54852.00 remaining balance.
-Citizen 5 has 113734.40 remaining balance.
-Citizen 6 has 54852.00 remaining balance.
-Citizen 7 has 113734.40 remaining balance.
-Citizen 8 has 131226.40 remaining balance.
-Citizen 9 has 113734.40 remaining balance.
-Citizen 10 has 54852.00 remaining balance.
-After adding 12374.40 to each citizen, "Urban_Garden" is chosen.
+Project Urban_Garden has no supporters, or is already funded.
+Chosen project: Green_Roof_Project
+Amount added to each citizen: 73821.87
+Citizen 1 has 0.00 remaining balance.
+Citizen 2 has 0.00 remaining balance.
+Citizen 3 has 73821.87 remaining balance.
+Citizen 4 has 0.00 remaining balance.
+Citizen 5 has 97300.27 remaining balance.
+Citizen 6 has 0.00 remaining balance.
+Citizen 7 has 97300.27 remaining balance.
+Citizen 8 has 0.00 remaining balance.
+Citizen 9 has 97300.27 remaining balance.
+Citizen 10 has 0.00 remaining balance.
+After adding 73821.87 to each citizen, "Green_Roof_Project" is chosen.
 
 ======================================================================
 Round 7
 ======================================================================
 Project Basketball_Courts has no supporters, or is already funded.
 Project Dog_Park has no supporters, or is already funded.
-Project Farmers_Market has no supporters, or is already funded.
+Project Green_Roof_Project has no supporters, or is already funded.
 Project Playground_East has no supporters, or is already funded.
 Project Skate_Park has no supporters, or is already funded.
 Project Urban_Garden has no supporters, or is already funded.
-Chosen project: Green_Roof_Project
-Amount added to each citizen: 21415.20
-Citizen 1 has 92212.00 remaining balance.
-Citizen 2 has 33514.40 remaining balance.
-Citizen 3 has 122775.20 remaining balance.
-Citizen 4 has 54852.00 remaining balance.
-Citizen 5 has 135149.60 remaining balance.
-Citizen 6 has 54852.00 remaining balance.
-Citizen 7 has 135149.60 remaining balance.
-Citizen 8 has 131226.40 remaining balance.
-Citizen 9 has 135149.60 remaining balance.
-Citizen 10 has 54852.00 remaining balance.
-After adding 21415.20 to each citizen, "Green_Roof_Project" is chosen.
+Chosen project: Farmers_Market
+Amount added to each citizen: 31069.33
+Citizen 1 has 31069.33 remaining balance.
+Citizen 2 has 31069.33 remaining balance.
+Citizen 3 has 0.00 remaining balance.
+Citizen 4 has 31069.33 remaining balance.
+Citizen 5 has 0.00 remaining balance.
+Citizen 6 has 31069.33 remaining balance.
+Citizen 7 has 0.00 remaining balance.
+Citizen 8 has 31069.33 remaining balance.
+Citizen 9 has 0.00 remaining balance.
+Citizen 10 has 31069.33 remaining balance.
+After adding 31069.33 to each citizen, "Farmers_Market" is chosen.
 
 ======================================================================
 Round 8
@@ -465,18 +466,18 @@ Project Playground_East has no supporters, or is already funded.
 Project Skate_Park has no supporters, or is already funded.
 Project Urban_Garden has no supporters, or is already funded.
 Chosen project: Bike_Lanes_Main_St
-Amount added to each citizen: 5912.80
-Citizen 1 has 92212.00 remaining balance.
-Citizen 2 has 39427.20 remaining balance.
-Citizen 3 has 122775.20 remaining balance.
-Citizen 4 has 60764.80 remaining balance.
-Citizen 5 has 135149.60 remaining balance.
-Citizen 6 has 60764.80 remaining balance.
-Citizen 7 has 135149.60 remaining balance.
-Citizen 8 has 137139.20 remaining balance.
-Citizen 9 has 135149.60 remaining balance.
-Citizen 10 has 60764.80 remaining balance.
-After adding 5912.80 to each citizen, "Bike_Lanes_Main_St" is chosen.
+Amount added to each citizen: 123786.13
+Citizen 1 has 0.00 remaining balance.
+Citizen 2 has 154855.47 remaining balance.
+Citizen 3 has 0.00 remaining balance.
+Citizen 4 has 154855.47 remaining balance.
+Citizen 5 has 0.00 remaining balance.
+Citizen 6 has 154855.47 remaining balance.
+Citizen 7 has 0.00 remaining balance.
+Citizen 8 has 154855.47 remaining balance.
+Citizen 9 has 0.00 remaining balance.
+Citizen 10 has 154855.47 remaining balance.
+After adding 123786.13 to each citizen, "Bike_Lanes_Main_St" is chosen.
 
 ======================================================================
 Round 9
@@ -489,72 +490,72 @@ Project Green_Roof_Project has no supporters, or is already funded.
 Project Playground_East has no supporters, or is already funded.
 Project Skate_Park has no supporters, or is already funded.
 Project Urban_Garden has no supporters, or is already funded.
-Chosen project: Animal_Shelter
-Amount added to each citizen: 11912.80
-Citizen 1 has 92212.00 remaining balance.
-Citizen 2 has 51340.00 remaining balance.
-Citizen 3 has 122775.20 remaining balance.
-Citizen 4 has 72677.60 remaining balance.
-Citizen 5 has 135149.60 remaining balance.
-Citizen 6 has 72677.60 remaining balance.
-Citizen 7 has 135149.60 remaining balance.
-Citizen 8 has 149052.00 remaining balance.
-Citizen 9 has 135149.60 remaining balance.
-Citizen 10 has 72677.60 remaining balance.
-After adding 11912.80 to each citizen, "Animal_Shelter" is chosen.
+Chosen project: Chess_Club
+Amount added to each citizen: 144.53
+Citizen 1 has 144.53 remaining balance.
+Citizen 2 has 155000.00 remaining balance.
+Citizen 3 has 144.53 remaining balance.
+Citizen 4 has 155000.00 remaining balance.
+Citizen 5 has 144.53 remaining balance.
+Citizen 6 has 0.00 remaining balance.
+Citizen 7 has 144.53 remaining balance.
+Citizen 8 has 0.00 remaining balance.
+Citizen 9 has 144.53 remaining balance.
+Citizen 10 has 155000.00 remaining balance.
+After adding 144.53 to each citizen, "Chess_Club" is chosen.
 
 ======================================================================
 Round 10
 ======================================================================
-Project Animal_Shelter has no supporters, or is already funded.
 Project Basketball_Courts has no supporters, or is already funded.
 Project Bike_Lanes_Main_St has no supporters, or is already funded.
+Project Chess_Club has no supporters, or is already funded.
 Project Dog_Park has no supporters, or is already funded.
 Project Farmers_Market has no supporters, or is already funded.
 Project Green_Roof_Project has no supporters, or is already funded.
 Project Playground_East has no supporters, or is already funded.
 Project Skate_Park has no supporters, or is already funded.
 Project Urban_Garden has no supporters, or is already funded.
-Chosen project: Cultural_Festival
-Amount added to each citizen: 23678.40
-Citizen 1 has 92212.00 remaining balance.
-Citizen 2 has 75018.40 remaining balance.
-Citizen 3 has 122775.20 remaining balance.
-Citizen 4 has 96356.00 remaining balance.
-Citizen 5 has 135149.60 remaining balance.
-Citizen 6 has 96356.00 remaining balance.
-Citizen 7 has 158828.00 remaining balance.
-Citizen 8 has 172730.40 remaining balance.
-Citizen 9 has 135149.60 remaining balance.
-Citizen 10 has 96356.00 remaining balance.
-After adding 23678.40 to each citizen, "Cultural_Festival" is chosen.
+Chosen project: Community_Center
+Amount added to each citizen: 80809.24
+Citizen 1 has 0.00 remaining balance.
+Citizen 2 has 0.00 remaining balance.
+Citizen 3 has 80953.78 remaining balance.
+Citizen 4 has 0.00 remaining balance.
+Citizen 5 has 80953.78 remaining balance.
+Citizen 6 has 0.00 remaining balance.
+Citizen 7 has 80953.78 remaining balance.
+Citizen 8 has 0.00 remaining balance.
+Citizen 9 has 80953.78 remaining balance.
+Citizen 10 has 0.00 remaining balance.
+After adding 80809.24 to each citizen, "Community_Center" is chosen.
 
 ======================================================================
 Round 11
 ======================================================================
-Project Animal_Shelter has no supporters, or is already funded.
 Project Basketball_Courts has no supporters, or is already funded.
 Project Bike_Lanes_Main_St has no supporters, or is already funded.
-Project Cultural_Festival has no supporters, or is already funded.
+Project Chess_Club has no supporters, or is already funded.
+Project Community_Center has no supporters, or is already funded.
 Project Dog_Park has no supporters, or is already funded.
 Project Farmers_Market has no supporters, or is already funded.
 Project Green_Roof_Project has no supporters, or is already funded.
 Project Playground_East has no supporters, or is already funded.
 Project Skate_Park has no supporters, or is already funded.
 Project Urban_Garden has no supporters, or is already funded.
-Chosen project: Chess_Club
-Amount added to each citizen: 20456.80
-Citizen 1 has 112668.80 remaining balance.
-Citizen 2 has 95475.20 remaining balance.
-Citizen 3 has 143232.00 remaining balance.
-Citizen 4 has 116812.80 remaining balance.
-Citizen 5 has 155606.40 remaining balance.
-Citizen 6 has 96356.00 remaining balance.
-Citizen 7 has 179284.80 remaining balance.
-Citizen 8 has 172730.40 remaining balance.
-Citizen 9 has 155606.40 remaining balance.
-Citizen 10 has 116812.80 remaining balance.
-After adding 20456.80 to each citizen, "Chess_Club" is chosen.
+Chosen project: Animal_Shelter
+Amount added to each citizen: 71236.98
+Citizen 1 has 0.00 remaining balance.
+Citizen 2 has 71236.98 remaining balance.
+Citizen 3 has 0.00 remaining balance.
+Citizen 4 has 71236.98 remaining balance.
+Citizen 5 has 0.00 remaining balance.
+Citizen 6 has 71236.98 remaining balance.
+Citizen 7 has 0.00 remaining balance.
+Citizen 8 has 71236.98 remaining balance.
+Citizen 9 has 0.00 remaining balance.
+Citizen 10 has 71236.98 remaining balance.
+After adding 71236.98 to each citizen, "Animal_Shelter" is chosen.
 
 ======================================================================
 Round 12
@@ -563,26 +564,26 @@ Project Animal_Shelter has no supporters, or is already funded.
 Project Basketball_Courts has no supporters, or is already funded.
 Project Bike_Lanes_Main_St has no supporters, or is already funded.
 Project Chess_Club has no supporters, or is already funded.
-Project Cultural_Festival has no supporters, or is already funded.
+Project Community_Center has no supporters, or is already funded.
 Project Dog_Park has no supporters, or is already funded.
 Project Farmers_Market has no supporters, or is already funded.
 Project Green_Roof_Project has no supporters, or is already funded.
 Project Playground_East has no supporters, or is already funded.
 Project Skate_Park has no supporters, or is already funded.
 Project Urban_Garden has no supporters, or is already funded.
-Chosen project: Recycling_Center
-Amount added to each citizen: 6720.32
-Citizen 1 has 112668.80 remaining balance.
-Citizen 2 has 102195.52 remaining balance.
-Citizen 3 has 143232.00 remaining balance.
-Citizen 4 has 123533.12 remaining balance.
-Citizen 5 has 155606.40 remaining balance.
-Citizen 6 has 103076.32 remaining balance.
-Citizen 7 has 179284.80 remaining balance.
-Citizen 8 has 179450.72 remaining balance.
-Citizen 9 has 155606.40 remaining balance.
-Citizen 10 has 123533.12 remaining balance.
-After adding 6720.32 to each citizen, "Recycling_Center" is chosen.
+Chosen project: Youth_Center
+Amount added to each citizen: 115505.21
+Citizen 1 has 0.00 remaining balance.
+Citizen 2 has 186742.19 remaining balance.
+Citizen 3 has 0.00 remaining balance.
+Citizen 4 has 0.00 remaining balance.
+Citizen 5 has 115505.21 remaining balance.
+Citizen 6 has 0.00 remaining balance.
+Citizen 7 has 115505.21 remaining balance.
+Citizen 8 has 186742.19 remaining balance.
+Citizen 9 has 0.00 remaining balance.
+Citizen 10 has 186742.19 remaining balance.
+After adding 115505.21 to each citizen, "Youth_Center" is chosen.
 
 ======================================================================
 Round 13
@@ -591,27 +592,27 @@ Project Animal_Shelter has no supporters, or is already funded.
 Project Basketball_Courts has no supporters, or is already funded.
 Project Bike_Lanes_Main_St has no supporters, or is already funded.
 Project Chess_Club has no supporters, or is already funded.
-Project Cultural_Festival has no supporters, or is already funded.
+Project Community_Center has no supporters, or is already funded.
 Project Dog_Park has no supporters, or is already funded.
 Project Farmers_Market has no supporters, or is already funded.
 Project Green_Roof_Project has no supporters, or is already funded.
 Project Playground_East has no supporters, or is already funded.
-Project Recycling_Center has no supporters, or is already funded.
 Project Skate_Park has no supporters, or is already funded.
 Project Urban_Garden has no supporters, or is already funded.
-Chosen project: Youth_Center
-Amount added to each citizen: 16376.67
-Citizen 1 has 112668.80 remaining balance.
-Citizen 2 has 118572.19 remaining balance.
-Citizen 3 has 143232.00 remaining balance.
-Citizen 4 has 123533.12 remaining balance.
-Citizen 5 has 171983.07 remaining balance.
-Citizen 6 has 103076.32 remaining balance.
-Citizen 7 has 195661.47 remaining balance.
-Citizen 8 has 195827.39 remaining balance.
-Citizen 9 has 155606.40 remaining balance.
-Citizen 10 has 139909.79 remaining balance.
-After adding 16376.67 to each citizen, "Youth_Center" is chosen.
+Project Youth_Center has no supporters, or is already funded.
+Chosen project: Veterans_Memorial
+Amount added to each citizen: 53257.81
+Citizen 1 has 53257.81 remaining balance.
+Citizen 2 has 240000.00 remaining balance.
+Citizen 3 has 53257.81 remaining balance.
+Citizen 4 has 53257.81 remaining balance.
+Citizen 5 has 168763.02 remaining balance.
+Citizen 6 has 53257.81 remaining balance.
+Citizen 7 has 168763.02 remaining balance.
+Citizen 8 has 0.00 remaining balance.
+Citizen 9 has 53257.81 remaining balance.
+Citizen 10 has 0.00 remaining balance.
+After adding 53257.81 to each citizen, "Veterans_Memorial" is chosen.
 
 ======================================================================
 Round 14
@@ -620,28 +621,28 @@ Project Animal_Shelter has no supporters, or is already funded.
 Project Basketball_Courts has no supporters, or is already funded.
 Project Bike_Lanes_Main_St has no supporters, or is already funded.
 Project Chess_Club has no supporters, or is already funded.
-Project Cultural_Festival has no supporters, or is already funded.
+Project Community_Center has no supporters, or is already funded.
 Project Dog_Park has no supporters, or is already funded.
 Project Farmers_Market has no supporters, or is already funded.
 Project Green_Roof_Project has no supporters, or is already funded.
 Project Playground_East has no supporters, or is already funded.
-Project Recycling_Center has no supporters, or is already funded.
 Project Skate_Park has no supporters, or is already funded.
 Project Urban_Garden has no supporters, or is already funded.
+Project Veterans_Memorial has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: Butterfly_Garden
-Amount added to each citizen: 17241.90
-Citizen 1 has 129910.70 remaining balance.
-Citizen 2 has 135814.10 remaining balance.
-Citizen 3 has 160473.90 remaining balance.
-Citizen 4 has 140775.02 remaining balance.
-Citizen 5 has 189224.98 remaining balance.
-Citizen 6 has 120318.22 remaining balance.
-Citizen 7 has 212903.38 remaining balance.
-Citizen 8 has 213069.30 remaining balance.
-Citizen 9 has 155606.40 remaining balance.
-Citizen 10 has 139909.79 remaining balance.
-After adding 17241.90 to each citizen, "Butterfly_Garden" is chosen.
+Chosen project: Recycling_Center
+Amount added to each citizen: 56540.10
+Citizen 1 has 0.00 remaining balance.
+Citizen 2 has 296540.10 remaining balance.
+Citizen 3 has 0.00 remaining balance.
+Citizen 4 has 109797.92 remaining balance.
+Citizen 5 has 0.00 remaining balance.
+Citizen 6 has 109797.92 remaining balance.
+Citizen 7 has 0.00 remaining balance.
+Citizen 8 has 56540.10 remaining balance.
+Citizen 9 has 0.00 remaining balance.
+Citizen 10 has 56540.10 remaining balance.
+After adding 56540.10 to each citizen, "Recycling_Center" is chosen.
 
 ======================================================================
 Round 15
@@ -649,9 +650,8 @@ Round 15
 Project Animal_Shelter has no supporters, or is already funded.
 Project Basketball_Courts has no supporters, or is already funded.
 Project Bike_Lanes_Main_St has no supporters, or is already funded.
-Project Butterfly_Garden has no supporters, or is already funded.
 Project Chess_Club has no supporters, or is already funded.
-Project Cultural_Festival has no supporters, or is already funded.
+Project Community_Center has no supporters, or is already funded.
 Project Dog_Park has no supporters, or is already funded.
 Project Farmers_Market has no supporters, or is already funded.
 Project Green_Roof_Project has no supporters, or is already funded.
@@ -659,20 +659,21 @@ Project Playground_East has no supporters, or is already funded.
 Project Recycling_Center has no supporters, or is already funded.
 Project Skate_Park has no supporters, or is already funded.
 Project Urban_Garden has no supporters, or is already funded.
+Project Veterans_Memorial has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: Public_Park_North
-Amount added to each citizen: 3515.45
-Citizen 1 has 129910.70 remaining balance.
-Citizen 2 has 139329.55 remaining balance.
-Citizen 3 has 160473.90 remaining balance.
-Citizen 4 has 144290.47 remaining balance.
-Citizen 5 has 189224.98 remaining balance.
-Citizen 6 has 123833.67 remaining balance.
-Citizen 7 has 212903.38 remaining balance.
-Citizen 8 has 216584.75 remaining balance.
-Citizen 9 has 159121.85 remaining balance.
-Citizen 10 has 139909.79 remaining balance.
-After adding 3515.45 to each citizen, "Public_Park_North" is chosen.
+Chosen project: New_Library
+Amount added to each citizen: 95130.64
+Citizen 1 has 0.00 remaining balance.
+Citizen 2 has 0.00 remaining balance.
+Citizen 3 has 95130.64 remaining balance.
+Citizen 4 has 0.00 remaining balance.
+Citizen 5 has 95130.64 remaining balance.
+Citizen 6 has 0.00 remaining balance.
+Citizen 7 has 95130.64 remaining balance.
+Citizen 8 has 0.00 remaining balance.
+Citizen 9 has 95130.64 remaining balance.
+Citizen 10 has 0.00 remaining balance.
+After adding 95130.64 to each citizen, "New_Library" is chosen.
 
 ======================================================================
 Round 16
@@ -680,31 +681,31 @@ Round 16
 Project Animal_Shelter has no supporters, or is already funded.
 Project Basketball_Courts has no supporters, or is already funded.
 Project Bike_Lanes_Main_St has no supporters, or is already funded.
-Project Butterfly_Garden has no supporters, or is already funded.
 Project Chess_Club has no supporters, or is already funded.
-Project Cultural_Festival has no supporters, or is already funded.
+Project Community_Center has no supporters, or is already funded.
 Project Dog_Park has no supporters, or is already funded.
 Project Farmers_Market has no supporters, or is already funded.
 Project Green_Roof_Project has no supporters, or is already funded.
+Project New_Library has no supporters, or is already funded.
 Project Playground_East has no supporters, or is already funded.
-Project Public_Park_North has no supporters, or is already funded.
 Project Recycling_Center has no supporters, or is already funded.
 Project Skate_Park has no supporters, or is already funded.
 Project Urban_Garden has no supporters, or is already funded.
+Project Veterans_Memorial has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: Rain_Garden
-Amount added to each citizen: 8987.39
-Citizen 1 has 138898.09 remaining balance.
-Citizen 2 has 148316.93 remaining balance.
-Citizen 3 has 169461.29 remaining balance.
-Citizen 4 has 153277.86 remaining balance.
-Citizen 5 has 198212.36 remaining balance.
-Citizen 6 has 132821.06 remaining balance.
-Citizen 7 has 212903.38 remaining balance.
-Citizen 8 has 225572.13 remaining balance.
-Citizen 9 has 159121.85 remaining balance.
-Citizen 10 has 148897.18 remaining balance.
-After adding 8987.39 to each citizen, "Rain_Garden" is chosen.
+Chosen project: Cultural_Festival
+Amount added to each citizen: 73652.02
+Citizen 1 has 0.00 remaining balance.
+Citizen 2 has 73652.02 remaining balance.
+Citizen 3 has 0.00 remaining balance.
+Citizen 4 has 73652.02 remaining balance.
+Citizen 5 has 0.00 remaining balance.
+Citizen 6 has 73652.02 remaining balance.
+Citizen 7 has 168782.66 remaining balance.
+Citizen 8 has 73652.02 remaining balance.
+Citizen 9 has 0.00 remaining balance.
+Citizen 10 has 73652.02 remaining balance.
+After adding 73652.02 to each citizen, "Cultural_Festival" is chosen.
 
 ======================================================================
 Round 17
@@ -712,32 +713,32 @@ Round 17
 Project Animal_Shelter has no supporters, or is already funded.
 Project Basketball_Courts has no supporters, or is already funded.
 Project Bike_Lanes_Main_St has no supporters, or is already funded.
-Project Butterfly_Garden has no supporters, or is already funded.
 Project Chess_Club has no supporters, or is already funded.
+Project Community_Center has no supporters, or is already funded.
 Project Cultural_Festival has no supporters, or is already funded.
 Project Dog_Park has no supporters, or is already funded.
 Project Farmers_Market has no supporters, or is already funded.
 Project Green_Roof_Project has no supporters, or is already funded.
+Project New_Library has no supporters, or is already funded.
 Project Playground_East has no supporters, or is already funded.
-Project Public_Park_North has no supporters, or is already funded.
-Project Rain_Garden has no supporters, or is already funded.
 Project Recycling_Center has no supporters, or is already funded.
 Project Skate_Park has no supporters, or is already funded.
 Project Urban_Garden has no supporters, or is already funded.
+Project Veterans_Memorial has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: Community_Center
-Amount added to each citizen: 369.46
-Citizen 1 has 138898.09 remaining balance.
-Citizen 2 has 148316.93 remaining balance.
-Citizen 3 has 169830.75 remaining balance.
-Citizen 4 has 153277.86 remaining balance.
-Citizen 5 has 198581.82 remaining balance.
-Citizen 6 has 132821.06 remaining balance.
-Citizen 7 has 213272.83 remaining balance.
-Citizen 8 has 225572.13 remaining balance.
-Citizen 9 has 159491.31 remaining balance.
-Citizen 10 has 148897.18 remaining balance.
-After adding 369.46 to each citizen, "Community_Center" is chosen.
+Chosen project: Rain_Garden
+Amount added to each citizen: 110608.67
+Citizen 1 has 110608.67 remaining balance.
+Citizen 2 has 184260.69 remaining balance.
+Citizen 3 has 110608.67 remaining balance.
+Citizen 4 has 184260.69 remaining balance.
+Citizen 5 has 110608.67 remaining balance.
+Citizen 6 has 184260.69 remaining balance.
+Citizen 7 has 0.00 remaining balance.
+Citizen 8 has 184260.69 remaining balance.
+Citizen 9 has 0.00 remaining balance.
+Citizen 10 has 184260.69 remaining balance.
+After adding 110608.67 to each citizen, "Rain_Garden" is chosen.
 
 ======================================================================
 Round 18
@@ -745,33 +746,33 @@ Round 18
 Project Animal_Shelter has no supporters, or is already funded.
 Project Basketball_Courts has no supporters, or is already funded.
 Project Bike_Lanes_Main_St has no supporters, or is already funded.
-Project Butterfly_Garden has no supporters, or is already funded.
 Project Chess_Club has no supporters, or is already funded.
 Project Community_Center has no supporters, or is already funded.
 Project Cultural_Festival has no supporters, or is already funded.
 Project Dog_Park has no supporters, or is already funded.
 Project Farmers_Market has no supporters, or is already funded.
 Project Green_Roof_Project has no supporters, or is already funded.
+Project New_Library has no supporters, or is already funded.
 Project Playground_East has no supporters, or is already funded.
-Project Public_Park_North has no supporters, or is already funded.
 Project Rain_Garden has no supporters, or is already funded.
 Project Recycling_Center has no supporters, or is already funded.
 Project Skate_Park has no supporters, or is already funded.
 Project Urban_Garden has no supporters, or is already funded.
+Project Veterans_Memorial has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
 Chosen project: Music_School
-Amount added to each citizen: 13920.02
-Citizen 1 has 138898.09 remaining balance.
-Citizen 2 has 162236.95 remaining balance.
-Citizen 3 has 169830.75 remaining balance.
-Citizen 4 has 153277.86 remaining balance.
-Citizen 5 has 212501.84 remaining balance.
-Citizen 6 has 132821.06 remaining balance.
-Citizen 7 has 227192.85 remaining balance.
-Citizen 8 has 225572.13 remaining balance.
-Citizen 9 has 173411.33 remaining balance.
-Citizen 10 has 162817.20 remaining balance.
-After adding 13920.02 to each citizen, "Music_School" is chosen.
+Amount added to each citizen: 23200.12
+Citizen 1 has 0.00 remaining balance.
+Citizen 2 has 207460.81 remaining balance.
+Citizen 3 has 0.00 remaining balance.
+Citizen 4 has 0.00 remaining balance.
+Citizen 5 has 133808.79 remaining balance.
+Citizen 6 has 0.00 remaining balance.
+Citizen 7 has 23200.12 remaining balance.
+Citizen 8 has 0.00 remaining balance.
+Citizen 9 has 23200.12 remaining balance.
+Citizen 10 has 207460.81 remaining balance.
+After adding 23200.12 to each citizen, "Music_School" is chosen.
 
 ======================================================================
 Round 19
@@ -779,7 +780,6 @@ Round 19
 Project Animal_Shelter has no supporters, or is already funded.
 Project Basketball_Courts has no supporters, or is already funded.
 Project Bike_Lanes_Main_St has no supporters, or is already funded.
-Project Butterfly_Garden has no supporters, or is already funded.
 Project Chess_Club has no supporters, or is already funded.
 Project Community_Center has no supporters, or is already funded.
 Project Cultural_Festival has no supporters, or is already funded.
@@ -787,26 +787,27 @@ Project Dog_Park has no supporters, or is already funded.
 Project Farmers_Market has no supporters, or is already funded.
 Project Green_Roof_Project has no supporters, or is already funded.
 Project Music_School has no supporters, or is already funded.
+Project New_Library has no supporters, or is already funded.
 Project Playground_East has no supporters, or is already funded.
-Project Public_Park_North has no supporters, or is already funded.
 Project Rain_Garden has no supporters, or is already funded.
 Project Recycling_Center has no supporters, or is already funded.
 Project Skate_Park has no supporters, or is already funded.
 Project Urban_Garden has no supporters, or is already funded.
+Project Veterans_Memorial has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: Emergency_Shelter
-Amount added to each citizen: 13751.85
-Citizen 1 has 138898.09 remaining balance.
-Citizen 2 has 175988.81 remaining balance.
-Citizen 3 has 169830.75 remaining balance.
-Citizen 4 has 167029.71 remaining balance.
-Citizen 5 has 212501.84 remaining balance.
-Citizen 6 has 146572.91 remaining balance.
-Citizen 7 has 227192.85 remaining balance.
-Citizen 8 has 239323.99 remaining balance.
-Citizen 9 has 187163.18 remaining balance.
-Citizen 10 has 162817.20 remaining balance.
-After adding 13751.85 to each citizen, "Emergency_Shelter" is chosen.
+Chosen project: Butterfly_Garden
+Amount added to each citizen: 49669.54
+Citizen 1 has 49669.54 remaining balance.
+Citizen 2 has 257130.34 remaining balance.
+Citizen 3 has 49669.54 remaining balance.
+Citizen 4 has 49669.54 remaining balance.
+Citizen 5 has 183478.33 remaining balance.
+Citizen 6 has 49669.54 remaining balance.
+Citizen 7 has 72869.66 remaining balance.
+Citizen 8 has 49669.54 remaining balance.
+Citizen 9 has 0.00 remaining balance.
+Citizen 10 has 0.00 remaining balance.
+After adding 49669.54 to each citizen, "Butterfly_Garden" is chosen.
 
 ======================================================================
 Round 20
@@ -819,30 +820,30 @@ Project Chess_Club has no supporters, or is already funded.
 Project Community_Center has no supporters, or is already funded.
 Project Cultural_Festival has no supporters, or is already funded.
 Project Dog_Park has no supporters, or is already funded.
-Project Emergency_Shelter has no supporters, or is already funded.
 Project Farmers_Market has no supporters, or is already funded.
 Project Green_Roof_Project has no supporters, or is already funded.
 Project Music_School has no supporters, or is already funded.
+Project New_Library has no supporters, or is already funded.
 Project Playground_East has no supporters, or is already funded.
-Project Public_Park_North has no supporters, or is already funded.
 Project Rain_Garden has no supporters, or is already funded.
 Project Recycling_Center has no supporters, or is already funded.
 Project Skate_Park has no supporters, or is already funded.
 Project Urban_Garden has no supporters, or is already funded.
+Project Veterans_Memorial has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: Food_Bank
-Amount added to each citizen: 17768.42
-Citizen 1 has 156666.51 remaining balance.
-Citizen 2 has 193757.23 remaining balance.
-Citizen 3 has 187599.17 remaining balance.
-Citizen 4 has 167029.71 remaining balance.
-Citizen 5 has 212501.84 remaining balance.
-Citizen 6 has 164341.34 remaining balance.
-Citizen 7 has 244961.28 remaining balance.
-Citizen 8 has 257092.41 remaining balance.
-Citizen 9 has 187163.18 remaining balance.
-Citizen 10 has 180585.62 remaining balance.
-After adding 17768.42 to each citizen, "Food_Bank" is chosen.
+Chosen project: Public_Park_North
+Amount added to each citizen: 98862.59
+Citizen 1 has 0.00 remaining balance.
+Citizen 2 has 355992.93 remaining balance.
+Citizen 3 has 0.00 remaining balance.
+Citizen 4 has 148532.13 remaining balance.
+Citizen 5 has 0.00 remaining balance.
+Citizen 6 has 148532.13 remaining balance.
+Citizen 7 has 0.00 remaining balance.
+Citizen 8 has 148532.13 remaining balance.
+Citizen 9 has 98862.59 remaining balance.
+Citizen 10 has 0.00 remaining balance.
+After adding 98862.59 to each citizen, "Public_Park_North" is chosen.
 
 ======================================================================
 Round 21
@@ -855,31 +856,31 @@ Project Chess_Club has no supporters, or is already funded.
 Project Community_Center has no supporters, or is already funded.
 Project Cultural_Festival has no supporters, or is already funded.
 Project Dog_Park has no supporters, or is already funded.
-Project Emergency_Shelter has no supporters, or is already funded.
 Project Farmers_Market has no supporters, or is already funded.
-Project Food_Bank has no supporters, or is already funded.
 Project Green_Roof_Project has no supporters, or is already funded.
 Project Music_School has no supporters, or is already funded.
+Project New_Library has no supporters, or is already funded.
 Project Playground_East has no supporters, or is already funded.
 Project Public_Park_North has no supporters, or is already funded.
 Project Rain_Garden has no supporters, or is already funded.
 Project Recycling_Center has no supporters, or is already funded.
 Project Skate_Park has no supporters, or is already funded.
 Project Urban_Garden has no supporters, or is already funded.
+Project Veterans_Memorial has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: New_Library
-Amount added to each citizen: 13421.20
-Citizen 1 has 156666.51 remaining balance.
-Citizen 2 has 193757.23 remaining balance.
-Citizen 3 has 201020.37 remaining balance.
-Citizen 4 has 167029.71 remaining balance.
-Citizen 5 has 225923.04 remaining balance.
-Citizen 6 has 164341.34 remaining balance.
-Citizen 7 has 258382.47 remaining balance.
-Citizen 8 has 257092.41 remaining balance.
-Citizen 9 has 200584.38 remaining balance.
-Citizen 10 has 180585.62 remaining balance.
-After adding 13421.20 to each citizen, "New_Library" is chosen.
+Chosen project: Homeless_Support
+Amount added to each citizen: 32314.27
+Citizen 1 has 32314.27 remaining balance.
+Citizen 2 has 0.00 remaining balance.
+Citizen 3 has 32314.27 remaining balance.
+Citizen 4 has 0.00 remaining balance.
+Citizen 5 has 32314.27 remaining balance.
+Citizen 6 has 180846.40 remaining balance.
+Citizen 7 has 32314.27 remaining balance.
+Citizen 8 has 0.00 remaining balance.
+Citizen 9 has 131176.86 remaining balance.
+Citizen 10 has 32314.27 remaining balance.
+After adding 32314.27 to each citizen, "Homeless_Support" is chosen.
 
 ======================================================================
 Round 22
@@ -892,129 +893,9 @@ Project Chess_Club has no supporters, or is already funded.
 Project Community_Center has no supporters, or is already funded.
 Project Cultural_Festival has no supporters, or is already funded.
 Project Dog_Park has no supporters, or is already funded.
-Project Emergency_Shelter has no supporters, or is already funded.
 Project Farmers_Market has no supporters, or is already funded.
-Project Food_Bank has no supporters, or is already funded.
 Project Green_Roof_Project has no supporters, or is already funded.
-Project Music_School has no supporters, or is already funded.
-Project New_Library has no supporters, or is already funded.
-Project Playground_East has no supporters, or is already funded.
-Project Public_Park_North has no supporters, or is already funded.
-Project Rain_Garden has no supporters, or is already funded.
-Project Recycling_Center has no supporters, or is already funded.
-Project Skate_Park has no supporters, or is already funded.
-Project Urban_Garden has no supporters, or is already funded.
-Project Youth_Center has no supporters, or is already funded.
-Chosen project: Coastal_Cleanup
-Amount added to each citizen: 8370.04
-Citizen 1 has 165036.55 remaining balance.
-Citizen 2 has 202127.27 remaining balance.
-Citizen 3 has 209390.40 remaining balance.
-Citizen 4 has 175399.75 remaining balance.
-Citizen 5 has 225923.04 remaining balance.
-Citizen 6 has 172711.37 remaining balance.
-Citizen 7 has 258382.47 remaining balance.
-Citizen 8 has 265462.44 remaining balance.
-Citizen 9 has 200584.38 remaining balance.
-Citizen 10 has 188955.66 remaining balance.
-After adding 8370.04 to each citizen, "Coastal_Cleanup" is chosen.
-
-======================================================================
-Round 23
-======================================================================
-Project Animal_Shelter has no supporters, or is already funded.
-Project Basketball_Courts has no supporters, or is already funded.
-Project Bike_Lanes_Main_St has no supporters, or is already funded.
-Project Butterfly_Garden has no supporters, or is already funded.
-Project Chess_Club has no supporters, or is already funded.
-Project Coastal_Cleanup has no supporters, or is already funded.
-Project Community_Center has no supporters, or is already funded.
-Project Cultural_Festival has no supporters, or is already funded.
-Project Dog_Park has no supporters, or is already funded.
-Project Emergency_Shelter has no supporters, or is already funded.
-Project Farmers_Market has no supporters, or is already funded.
-Project Food_Bank has no supporters, or is already funded.
-Project Green_Roof_Project has no supporters, or is already funded.
-Project Music_School has no supporters, or is already funded.
-Project New_Library has no supporters, or is already funded.
-Project Playground_East has no supporters, or is already funded.
-Project Public_Park_North has no supporters, or is already funded.
-Project Rain_Garden has no supporters, or is already funded.
-Project Recycling_Center has no supporters, or is already funded.
-Project Skate_Park has no supporters, or is already funded.
-Project Urban_Garden has no supporters, or is already funded.
-Project Youth_Center has no supporters, or is already funded.
-Chosen project: Daycare_Center
-Amount added to each citizen: 11759.01
-Citizen 1 has 176795.56 remaining balance.
-Citizen 2 has 213886.27 remaining balance.
-Citizen 3 has 209390.40 remaining balance.
-Citizen 4 has 175399.75 remaining balance.
-Citizen 5 has 237682.05 remaining balance.
-Citizen 6 has 172711.37 remaining balance.
-Citizen 7 has 270141.48 remaining balance.
-Citizen 8 has 265462.44 remaining balance.
-Citizen 9 has 212343.39 remaining balance.
-Citizen 10 has 200714.67 remaining balance.
-After adding 11759.01 to each citizen, "Daycare_Center" is chosen.
-
-======================================================================
-Round 24
-======================================================================
-Project Animal_Shelter has no supporters, or is already funded.
-Project Basketball_Courts has no supporters, or is already funded.
-Project Bike_Lanes_Main_St has no supporters, or is already funded.
-Project Butterfly_Garden has no supporters, or is already funded.
-Project Chess_Club has no supporters, or is already funded.
-Project Coastal_Cleanup has no supporters, or is already funded.
-Project Community_Center has no supporters, or is already funded.
-Project Cultural_Festival has no supporters, or is already funded.
-Project Daycare_Center has no supporters, or is already funded.
-Project Dog_Park has no supporters, or is already funded.
-Project Emergency_Shelter has no supporters, or is already funded.
-Project Farmers_Market has no supporters, or is already funded.
-Project Food_Bank has no supporters, or is already funded.
-Project Green_Roof_Project has no supporters, or is already funded.
-Project Music_School has no supporters, or is already funded.
-Project New_Library has no supporters, or is already funded.
-Project Playground_East has no supporters, or is already funded.
-Project Public_Park_North has no supporters, or is already funded.
-Project Rain_Garden has no supporters, or is already funded.
-Project Recycling_Center has no supporters, or is already funded.
-Project Skate_Park has no supporters, or is already funded.
-Project Urban_Garden has no supporters, or is already funded.
-Project Youth_Center has no supporters, or is already funded.
-Chosen project: Veterans_Memorial
-Amount added to each citizen: 6911.44
-Citizen 1 has 183707.00 remaining balance.
-Citizen 2 has 220797.72 remaining balance.
-Citizen 3 has 216301.85 remaining balance.
-Citizen 4 has 182311.20 remaining balance.
-Citizen 5 has 244593.49 remaining balance.
-Citizen 6 has 179622.82 remaining balance.
-Citizen 7 has 277052.92 remaining balance.
-Citizen 8 has 265462.44 remaining balance.
-Citizen 9 has 219254.83 remaining balance.
-Citizen 10 has 200714.67 remaining balance.
-After adding 6911.44 to each citizen, "Veterans_Memorial" is chosen.
-
-======================================================================
-Round 25
-======================================================================
-Project Animal_Shelter has no supporters, or is already funded.
-Project Basketball_Courts has no supporters, or is already funded.
-Project Bike_Lanes_Main_St has no supporters, or is already funded.
-Project Butterfly_Garden has no supporters, or is already funded.
-Project Chess_Club has no supporters, or is already funded.
-Project Coastal_Cleanup has no supporters, or is already funded.
-Project Community_Center has no supporters, or is already funded.
-Project Cultural_Festival has no supporters, or is already funded.
-Project Daycare_Center has no supporters, or is already funded.
-Project Dog_Park has no supporters, or is already funded.
-Project Emergency_Shelter has no supporters, or is already funded.
-Project Farmers_Market has no supporters, or is already funded.
-Project Food_Bank has no supporters, or is already funded.
-Project Green_Roof_Project has no supporters, or is already funded.
+Project Homeless_Support has no supporters, or is already funded.
 Project Music_School has no supporters, or is already funded.
 Project New_Library has no supporters, or is already funded.
 Project Playground_East has no supporters, or is already funded.
@@ -1025,19 +906,139 @@ Project Skate_Park has no supporters, or is already funded.
 Project Urban_Garden has no supporters, or is already funded.
 Project Veterans_Memorial has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: Streetlight_Upgrade
-Amount added to each citizen: 4176.79
-Citizen 1 has 187883.79 remaining balance.
-Citizen 2 has 224974.51 remaining balance.
-Citizen 3 has 220478.64 remaining balance.
-Citizen 4 has 186487.99 remaining balance.
-Citizen 5 has 244593.49 remaining balance.
-Citizen 6 has 183799.61 remaining balance.
-Citizen 7 has 277052.92 remaining balance.
-Citizen 8 has 269639.24 remaining balance.
-Citizen 9 has 223431.62 remaining balance.
-Citizen 10 has 204891.46 remaining balance.
-After adding 4176.79 to each citizen, "Streetlight_Upgrade" is chosen.
+Chosen project: Food_Bank
+Amount added to each citizen: 152169.62
+Citizen 1 has 184483.89 remaining balance.
+Citizen 2 has 152169.62 remaining balance.
+Citizen 3 has 184483.89 remaining balance.
+Citizen 4 has 0.00 remaining balance.
+Citizen 5 has 0.00 remaining balance.
+Citizen 6 has 333016.02 remaining balance.
+Citizen 7 has 184483.89 remaining balance.
+Citizen 8 has 152169.62 remaining balance.
+Citizen 9 has 0.00 remaining balance.
+Citizen 10 has 184483.89 remaining balance.
+After adding 152169.62 to each citizen, "Food_Bank" is chosen.
+
+======================================================================
+Round 23
+======================================================================
+Project Animal_Shelter has no supporters, or is already funded.
+Project Basketball_Courts has no supporters, or is already funded.
+Project Bike_Lanes_Main_St has no supporters, or is already funded.
+Project Butterfly_Garden has no supporters, or is already funded.
+Project Chess_Club has no supporters, or is already funded.
+Project Community_Center has no supporters, or is already funded.
+Project Cultural_Festival has no supporters, or is already funded.
+Project Dog_Park has no supporters, or is already funded.
+Project Farmers_Market has no supporters, or is already funded.
+Project Food_Bank has no supporters, or is already funded.
+Project Green_Roof_Project has no supporters, or is already funded.
+Project Homeless_Support has no supporters, or is already funded.
+Project Music_School has no supporters, or is already funded.
+Project New_Library has no supporters, or is already funded.
+Project Playground_East has no supporters, or is already funded.
+Project Public_Park_North has no supporters, or is already funded.
+Project Rain_Garden has no supporters, or is already funded.
+Project Recycling_Center has no supporters, or is already funded.
+Project Skate_Park has no supporters, or is already funded.
+Project Urban_Garden has no supporters, or is already funded.
+Project Veterans_Memorial has no supporters, or is already funded.
+Project Youth_Center has no supporters, or is already funded.
+Chosen project: Emergency_Shelter
+Amount added to each citizen: 48412.88
+Citizen 1 has 0.00 remaining balance.
+Citizen 2 has 200582.51 remaining balance.
+Citizen 3 has 0.00 remaining balance.
+Citizen 4 has 48412.88 remaining balance.
+Citizen 5 has 0.00 remaining balance.
+Citizen 6 has 381428.90 remaining balance.
+Citizen 7 has 0.00 remaining balance.
+Citizen 8 has 200582.51 remaining balance.
+Citizen 9 has 48412.88 remaining balance.
+Citizen 10 has 0.00 remaining balance.
+After adding 48412.88 to each citizen, "Emergency_Shelter" is chosen.
+
+======================================================================
+Round 24
+======================================================================
+Project Animal_Shelter has no supporters, or is already funded.
+Project Basketball_Courts has no supporters, or is already funded.
+Project Bike_Lanes_Main_St has no supporters, or is already funded.
+Project Butterfly_Garden has no supporters, or is already funded.
+Project Chess_Club has no supporters, or is already funded.
+Project Community_Center has no supporters, or is already funded.
+Project Cultural_Festival has no supporters, or is already funded.
+Project Dog_Park has no supporters, or is already funded.
+Project Emergency_Shelter has no supporters, or is already funded.
+Project Farmers_Market has no supporters, or is already funded.
+Project Food_Bank has no supporters, or is already funded.
+Project Green_Roof_Project has no supporters, or is already funded.
+Project Homeless_Support has no supporters, or is already funded.
+Project Music_School has no supporters, or is already funded.
+Project New_Library has no supporters, or is already funded.
+Project Playground_East has no supporters, or is already funded.
+Project Public_Park_North has no supporters, or is already funded.
+Project Rain_Garden has no supporters, or is already funded.
+Project Recycling_Center has no supporters, or is already funded.
+Project Skate_Park has no supporters, or is already funded.
+Project Urban_Garden has no supporters, or is already funded.
+Project Veterans_Memorial has no supporters, or is already funded.
+Project Youth_Center has no supporters, or is already funded.
+Chosen project: Pedestrian_Bridge
+Amount added to each citizen: 53798.64
+Citizen 1 has 0.00 remaining balance.
+Citizen 2 has 0.00 remaining balance.
+Citizen 3 has 53798.64 remaining balance.
+Citizen 4 has 0.00 remaining balance.
+Citizen 5 has 53798.64 remaining balance.
+Citizen 6 has 0.00 remaining balance.
+Citizen 7 has 53798.64 remaining balance.
+Citizen 8 has 0.00 remaining balance.
+Citizen 9 has 102211.52 remaining balance.
+Citizen 10 has 53798.64 remaining balance.
+After adding 53798.64 to each citizen, "Pedestrian_Bridge" is chosen.
+
+======================================================================
+Round 25
+======================================================================
+Project Animal_Shelter has no supporters, or is already funded.
+Project Basketball_Courts has no supporters, or is already funded.
+Project Bike_Lanes_Main_St has no supporters, or is already funded.
+Project Butterfly_Garden has no supporters, or is already funded.
+Project Chess_Club has no supporters, or is already funded.
+Project Community_Center has no supporters, or is already funded.
+Project Cultural_Festival has no supporters, or is already funded.
+Project Dog_Park has no supporters, or is already funded.
+Project Emergency_Shelter has no supporters, or is already funded.
+Project Farmers_Market has no supporters, or is already funded.
+Project Food_Bank has no supporters, or is already funded.
+Project Green_Roof_Project has no supporters, or is already funded.
+Project Homeless_Support has no supporters, or is already funded.
+Project Music_School has no supporters, or is already funded.
+Project New_Library has no supporters, or is already funded.
+Project Pedestrian_Bridge has no supporters, or is already funded.
+Project Playground_East has no supporters, or is already funded.
+Project Public_Park_North has no supporters, or is already funded.
+Project Rain_Garden has no supporters, or is already funded.
+Project Recycling_Center has no supporters, or is already funded.
+Project Skate_Park has no supporters, or is already funded.
+Project Urban_Garden has no supporters, or is already funded.
+Project Veterans_Memorial has no supporters, or is already funded.
+Project Youth_Center has no supporters, or is already funded.
+Chosen project: Coastal_Cleanup
+Amount added to each citizen: 166730.40
+Citizen 1 has 166730.40 remaining balance.
+Citizen 2 has 166730.40 remaining balance.
+Citizen 3 has 220529.04 remaining balance.
+Citizen 4 has 166730.40 remaining balance.
+Citizen 5 has 0.00 remaining balance.
+Citizen 6 has 166730.40 remaining balance.
+Citizen 7 has 0.00 remaining balance.
+Citizen 8 has 166730.40 remaining balance.
+Citizen 9 has 0.00 remaining balance.
+Citizen 10 has 220529.04 remaining balance.
+After adding 166730.40 to each citizen, "Coastal_Cleanup" is chosen.
 
 ======================================================================
 Round 26
@@ -1050,36 +1051,36 @@ Project Chess_Club has no supporters, or is already funded.
 Project Coastal_Cleanup has no supporters, or is already funded.
 Project Community_Center has no supporters, or is already funded.
 Project Cultural_Festival has no supporters, or is already funded.
-Project Daycare_Center has no supporters, or is already funded.
 Project Dog_Park has no supporters, or is already funded.
 Project Emergency_Shelter has no supporters, or is already funded.
 Project Farmers_Market has no supporters, or is already funded.
 Project Food_Bank has no supporters, or is already funded.
 Project Green_Roof_Project has no supporters, or is already funded.
+Project Homeless_Support has no supporters, or is already funded.
 Project Music_School has no supporters, or is already funded.
 Project New_Library has no supporters, or is already funded.
+Project Pedestrian_Bridge has no supporters, or is already funded.
 Project Playground_East has no supporters, or is already funded.
 Project Public_Park_North has no supporters, or is already funded.
 Project Rain_Garden has no supporters, or is already funded.
 Project Recycling_Center has no supporters, or is already funded.
 Project Skate_Park has no supporters, or is already funded.
-Project Streetlight_Upgrade has no supporters, or is already funded.
 Project Urban_Garden has no supporters, or is already funded.
 Project Veterans_Memorial has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: Pedestrian_Bridge
-Amount added to each citizen: 9442.97
-Citizen 1 has 187883.79 remaining balance.
-Citizen 2 has 224974.51 remaining balance.
-Citizen 3 has 229921.61 remaining balance.
-Citizen 4 has 186487.99 remaining balance.
-Citizen 5 has 254036.46 remaining balance.
-Citizen 6 has 183799.61 remaining balance.
-Citizen 7 has 286495.90 remaining balance.
-Citizen 8 has 269639.24 remaining balance.
-Citizen 9 has 232874.59 remaining balance.
-Citizen 10 has 214334.43 remaining balance.
-After adding 9442.97 to each citizen, "Pedestrian_Bridge" is chosen.
+Chosen project: Daycare_Center
+Amount added to each citizen: 37319.94
+Citizen 1 has 204050.34 remaining balance.
+Citizen 2 has 204050.34 remaining balance.
+Citizen 3 has 0.00 remaining balance.
+Citizen 4 has 0.00 remaining balance.
+Citizen 5 has 37319.94 remaining balance.
+Citizen 6 has 0.00 remaining balance.
+Citizen 7 has 37319.94 remaining balance.
+Citizen 8 has 0.00 remaining balance.
+Citizen 9 has 37319.94 remaining balance.
+Citizen 10 has 257848.98 remaining balance.
+After adding 37319.94 to each citizen, "Daycare_Center" is chosen.
 
 ======================================================================
 Round 27
@@ -1098,6 +1099,7 @@ Project Emergency_Shelter has no supporters, or is already funded.
 Project Farmers_Market has no supporters, or is already funded.
 Project Food_Bank has no supporters, or is already funded.
 Project Green_Roof_Project has no supporters, or is already funded.
+Project Homeless_Support has no supporters, or is already funded.
 Project Music_School has no supporters, or is already funded.
 Project New_Library has no supporters, or is already funded.
 Project Pedestrian_Bridge has no supporters, or is already funded.
@@ -1106,23 +1108,22 @@ Project Public_Park_North has no supporters, or is already funded.
 Project Rain_Garden has no supporters, or is already funded.
 Project Recycling_Center has no supporters, or is already funded.
 Project Skate_Park has no supporters, or is already funded.
-Project Streetlight_Upgrade has no supporters, or is already funded.
 Project Urban_Garden has no supporters, or is already funded.
 Project Veterans_Memorial has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: Science_Lab
-Amount added to each citizen: 21322.22
-Citizen 1 has 187883.79 remaining balance.
-Citizen 2 has 246296.73 remaining balance.
-Citizen 3 has 229921.61 remaining balance.
-Citizen 4 has 186487.99 remaining balance.
-Citizen 5 has 275358.68 remaining balance.
-Citizen 6 has 183799.61 remaining balance.
-Citizen 7 has 307818.12 remaining balance.
-Citizen 8 has 269639.24 remaining balance.
-Citizen 9 has 254196.82 remaining balance.
-Citizen 10 has 214334.43 remaining balance.
-After adding 21322.22 to each citizen, "Science_Lab" is chosen.
+Chosen project: Language_Center
+Amount added to each citizen: 151075.51
+Citizen 1 has 355125.85 remaining balance.
+Citizen 2 has 355125.85 remaining balance.
+Citizen 3 has 151075.51 remaining balance.
+Citizen 4 has 151075.51 remaining balance.
+Citizen 5 has 188395.45 remaining balance.
+Citizen 6 has 151075.51 remaining balance.
+Citizen 7 has 188395.45 remaining balance.
+Citizen 8 has 0.00 remaining balance.
+Citizen 9 has 188395.45 remaining balance.
+Citizen 10 has 0.00 remaining balance.
+After adding 151075.51 to each citizen, "Language_Center" is chosen.
 
 ======================================================================
 Round 28
@@ -1141,6 +1142,8 @@ Project Emergency_Shelter has no supporters, or is already funded.
 Project Farmers_Market has no supporters, or is already funded.
 Project Food_Bank has no supporters, or is already funded.
 Project Green_Roof_Project has no supporters, or is already funded.
+Project Homeless_Support has no supporters, or is already funded.
+Project Language_Center has no supporters, or is already funded.
 Project Music_School has no supporters, or is already funded.
 Project New_Library has no supporters, or is already funded.
 Project Pedestrian_Bridge has no supporters, or is already funded.
@@ -1148,25 +1151,23 @@ Project Playground_East has no supporters, or is already funded.
 Project Public_Park_North has no supporters, or is already funded.
 Project Rain_Garden has no supporters, or is already funded.
 Project Recycling_Center has no supporters, or is already funded.
-Project Science_Lab has no supporters, or is already funded.
 Project Skate_Park has no supporters, or is already funded.
-Project Streetlight_Upgrade has no supporters, or is already funded.
 Project Urban_Garden has no supporters, or is already funded.
 Project Veterans_Memorial has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
 Chosen project: Vocational_School
-Amount added to each citizen: 7281.61
-Citizen 1 has 195165.40 remaining balance.
-Citizen 2 has 246296.73 remaining balance.
-Citizen 3 has 229921.61 remaining balance.
-Citizen 4 has 193769.60 remaining balance.
-Citizen 5 has 275358.68 remaining balance.
-Citizen 6 has 191081.22 remaining balance.
-Citizen 7 has 307818.12 remaining balance.
-Citizen 8 has 276920.84 remaining balance.
-Citizen 9 has 254196.82 remaining balance.
-Citizen 10 has 221616.04 remaining balance.
-After adding 7281.61 to each citizen, "Vocational_School" is chosen.
+Amount added to each citizen: 55722.46
+Citizen 1 has 410848.31 remaining balance.
+Citizen 2 has 0.00 remaining balance.
+Citizen 3 has 0.00 remaining balance.
+Citizen 4 has 206797.97 remaining balance.
+Citizen 5 has 0.00 remaining balance.
+Citizen 6 has 206797.97 remaining balance.
+Citizen 7 has 0.00 remaining balance.
+Citizen 8 has 55722.46 remaining balance.
+Citizen 9 has 0.00 remaining balance.
+Citizen 10 has 55722.46 remaining balance.
+After adding 55722.46 to each citizen, "Vocational_School" is chosen.
 
 ======================================================================
 Round 29
@@ -1185,6 +1186,8 @@ Project Emergency_Shelter has no supporters, or is already funded.
 Project Farmers_Market has no supporters, or is already funded.
 Project Food_Bank has no supporters, or is already funded.
 Project Green_Roof_Project has no supporters, or is already funded.
+Project Homeless_Support has no supporters, or is already funded.
+Project Language_Center has no supporters, or is already funded.
 Project Music_School has no supporters, or is already funded.
 Project New_Library has no supporters, or is already funded.
 Project Pedestrian_Bridge has no supporters, or is already funded.
@@ -1192,26 +1195,24 @@ Project Playground_East has no supporters, or is already funded.
 Project Public_Park_North has no supporters, or is already funded.
 Project Rain_Garden has no supporters, or is already funded.
 Project Recycling_Center has no supporters, or is already funded.
-Project Science_Lab has no supporters, or is already funded.
 Project Skate_Park has no supporters, or is already funded.
-Project Streetlight_Upgrade has no supporters, or is already funded.
 Project Urban_Garden has no supporters, or is already funded.
 Project Veterans_Memorial has no supporters, or is already funded.
 Project Vocational_School has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: Homeless_Support
-Amount added to each citizen: 11004.28
-Citizen 1 has 206169.68 remaining balance.
-Citizen 2 has 246296.73 remaining balance.
-Citizen 3 has 240925.89 remaining balance.
-Citizen 4 has 193769.60 remaining balance.
-Citizen 5 has 286362.96 remaining balance.
-Citizen 6 has 202085.49 remaining balance.
-Citizen 7 has 318822.40 remaining balance.
-Citizen 8 has 276920.84 remaining balance.
-Citizen 9 has 265201.09 remaining balance.
-Citizen 10 has 232620.31 remaining balance.
-After adding 11004.28 to each citizen, "Homeless_Support" is chosen.
+Chosen project: Science_Lab
+Amount added to each citizen: 77351.81
+Citizen 1 has 0.00 remaining balance.
+Citizen 2 has 77351.81 remaining balance.
+Citizen 3 has 0.00 remaining balance.
+Citizen 4 has 0.00 remaining balance.
+Citizen 5 has 77351.81 remaining balance.
+Citizen 6 has 0.00 remaining balance.
+Citizen 7 has 77351.81 remaining balance.
+Citizen 8 has 0.00 remaining balance.
+Citizen 9 has 77351.81 remaining balance.
+Citizen 10 has 0.00 remaining balance.
+After adding 77351.81 to each citizen, "Science_Lab" is chosen.
 
 ======================================================================
 Round 30
@@ -1231,6 +1232,7 @@ Project Farmers_Market has no supporters, or is already funded.
 Project Food_Bank has no supporters, or is already funded.
 Project Green_Roof_Project has no supporters, or is already funded.
 Project Homeless_Support has no supporters, or is already funded.
+Project Language_Center has no supporters, or is already funded.
 Project Music_School has no supporters, or is already funded.
 Project New_Library has no supporters, or is already funded.
 Project Pedestrian_Bridge has no supporters, or is already funded.
@@ -1240,24 +1242,23 @@ Project Rain_Garden has no supporters, or is already funded.
 Project Recycling_Center has no supporters, or is already funded.
 Project Science_Lab has no supporters, or is already funded.
 Project Skate_Park has no supporters, or is already funded.
-Project Streetlight_Upgrade has no supporters, or is already funded.
 Project Urban_Garden has no supporters, or is already funded.
 Project Veterans_Memorial has no supporters, or is already funded.
 Project Vocational_School has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: Historic_Preservation
-Amount added to each citizen: 20735.57
-Citizen 1 has 226905.25 remaining balance.
-Citizen 2 has 267032.30 remaining balance.
-Citizen 3 has 240925.89 remaining balance.
-Citizen 4 has 193769.60 remaining balance.
-Citizen 5 has 307098.53 remaining balance.
-Citizen 6 has 202085.49 remaining balance.
-Citizen 7 has 339557.97 remaining balance.
-Citizen 8 has 276920.84 remaining balance.
-Citizen 9 has 285936.67 remaining balance.
-Citizen 10 has 232620.31 remaining balance.
-After adding 20735.57 to each citizen, "Historic_Preservation" is chosen.
+Chosen project: Streetlight_Upgrade
+Amount added to each citizen: 187648.19
+Citizen 1 has 187648.19 remaining balance.
+Citizen 2 has 265000.00 remaining balance.
+Citizen 3 has 187648.19 remaining balance.
+Citizen 4 has 187648.19 remaining balance.
+Citizen 5 has 0.00 remaining balance.
+Citizen 6 has 187648.19 remaining balance.
+Citizen 7 has 0.00 remaining balance.
+Citizen 8 has 187648.19 remaining balance.
+Citizen 9 has 265000.00 remaining balance.
+Citizen 10 has 187648.19 remaining balance.
+After adding 187648.19 to each citizen, "Streetlight_Upgrade" is chosen.
 
 ======================================================================
 Round 31
@@ -1276,8 +1277,8 @@ Project Emergency_Shelter has no supporters, or is already funded.
 Project Farmers_Market has no supporters, or is already funded.
 Project Food_Bank has no supporters, or is already funded.
 Project Green_Roof_Project has no supporters, or is already funded.
-Project Historic_Preservation has no supporters, or is already funded.
 Project Homeless_Support has no supporters, or is already funded.
+Project Language_Center has no supporters, or is already funded.
 Project Music_School has no supporters, or is already funded.
 Project New_Library has no supporters, or is already funded.
 Project Pedestrian_Bridge has no supporters, or is already funded.
@@ -1292,19 +1293,19 @@ Project Urban_Garden has no supporters, or is already funded.
 Project Veterans_Memorial has no supporters, or is already funded.
 Project Vocational_School has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: Robotics_Workshop
-Amount added to each citizen: 7252.68
-Citizen 1 has 234157.93 remaining balance.
-Citizen 2 has 274284.99 remaining balance.
-Citizen 3 has 248178.57 remaining balance.
-Citizen 4 has 201022.28 remaining balance.
-Citizen 5 has 314351.22 remaining balance.
-Citizen 6 has 209338.18 remaining balance.
-Citizen 7 has 339557.97 remaining balance.
-Citizen 8 has 284173.53 remaining balance.
-Citizen 9 has 285936.67 remaining balance.
-Citizen 10 has 239873.00 remaining balance.
-After adding 7252.68 to each citizen, "Robotics_Workshop" is chosen.
+Chosen project: Historic_Preservation
+Amount added to each citizen: 62351.81
+Citizen 1 has 250000.00 remaining balance.
+Citizen 2 has 327351.81 remaining balance.
+Citizen 3 has 0.00 remaining balance.
+Citizen 4 has 0.00 remaining balance.
+Citizen 5 has 62351.81 remaining balance.
+Citizen 6 has 0.00 remaining balance.
+Citizen 7 has 62351.81 remaining balance.
+Citizen 8 has 0.00 remaining balance.
+Citizen 9 has 327351.81 remaining balance.
+Citizen 10 has 0.00 remaining balance.
+After adding 62351.81 to each citizen, "Historic_Preservation" is chosen.
 
 ======================================================================
 Round 32
@@ -1325,6 +1326,7 @@ Project Food_Bank has no supporters, or is already funded.
 Project Green_Roof_Project has no supporters, or is already funded.
 Project Historic_Preservation has no supporters, or is already funded.
 Project Homeless_Support has no supporters, or is already funded.
+Project Language_Center has no supporters, or is already funded.
 Project Music_School has no supporters, or is already funded.
 Project New_Library has no supporters, or is already funded.
 Project Pedestrian_Bridge has no supporters, or is already funded.
@@ -1332,7 +1334,6 @@ Project Playground_East has no supporters, or is already funded.
 Project Public_Park_North has no supporters, or is already funded.
 Project Rain_Garden has no supporters, or is already funded.
 Project Recycling_Center has no supporters, or is already funded.
-Project Robotics_Workshop has no supporters, or is already funded.
 Project Science_Lab has no supporters, or is already funded.
 Project Skate_Park has no supporters, or is already funded.
 Project Streetlight_Upgrade has no supporters, or is already funded.
@@ -1340,19 +1341,19 @@ Project Urban_Garden has no supporters, or is already funded.
 Project Veterans_Memorial has no supporters, or is already funded.
 Project Vocational_School has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: Dental_Clinic
-Amount added to each citizen: 15730.09
-Citizen 1 has 249888.02 remaining balance.
-Citizen 2 has 274284.99 remaining balance.
-Citizen 3 has 263908.66 remaining balance.
-Citizen 4 has 216752.37 remaining balance.
-Citizen 5 has 314351.22 remaining balance.
-Citizen 6 has 225068.27 remaining balance.
-Citizen 7 has 355288.06 remaining balance.
-Citizen 8 has 284173.53 remaining balance.
-Citizen 9 has 301666.75 remaining balance.
-Citizen 10 has 255603.09 remaining balance.
-After adding 15730.09 to each citizen, "Dental_Clinic" is chosen.
+Chosen project: Robotics_Workshop
+Amount added to each citizen: 125148.19
+Citizen 1 has 375148.19 remaining balance.
+Citizen 2 has 452500.00 remaining balance.
+Citizen 3 has 125148.19 remaining balance.
+Citizen 4 has 125148.19 remaining balance.
+Citizen 5 has 187500.00 remaining balance.
+Citizen 6 has 125148.19 remaining balance.
+Citizen 7 has 0.00 remaining balance.
+Citizen 8 has 125148.19 remaining balance.
+Citizen 9 has 0.00 remaining balance.
+Citizen 10 has 125148.19 remaining balance.
+After adding 125148.19 to each citizen, "Robotics_Workshop" is chosen.
 
 ======================================================================
 Round 33
@@ -1366,56 +1367,6 @@ Project Coastal_Cleanup has no supporters, or is already funded.
 Project Community_Center has no supporters, or is already funded.
 Project Cultural_Festival has no supporters, or is already funded.
 Project Daycare_Center has no supporters, or is already funded.
-Project Dental_Clinic has no supporters, or is already funded.
-Project Dog_Park has no supporters, or is already funded.
-Project Emergency_Shelter has no supporters, or is already funded.
-Project Farmers_Market has no supporters, or is already funded.
-Project Food_Bank has no supporters, or is already funded.
-Project Green_Roof_Project has no supporters, or is already funded.
-Project Historic_Preservation has no supporters, or is already funded.
-Project Homeless_Support has no supporters, or is already funded.
-Project Music_School has no supporters, or is already funded.
-Project New_Library has no supporters, or is already funded.
-Project Pedestrian_Bridge has no supporters, or is already funded.
-Project Playground_East has no supporters, or is already funded.
-Project Public_Park_North has no supporters, or is already funded.
-Project Rain_Garden has no supporters, or is already funded.
-Project Recycling_Center has no supporters, or is already funded.
-Project Robotics_Workshop has no supporters, or is already funded.
-Project Science_Lab has no supporters, or is already funded.
-Project Skate_Park has no supporters, or is already funded.
-Project Streetlight_Upgrade has no supporters, or is already funded.
-Project Urban_Garden has no supporters, or is already funded.
-Project Veterans_Memorial has no supporters, or is already funded.
-Project Vocational_School has no supporters, or is already funded.
-Project Youth_Center has no supporters, or is already funded.
-Chosen project: Language_Center
-Amount added to each citizen: 10111.69
-Citizen 1 has 259999.72 remaining balance.
-Citizen 2 has 284396.68 remaining balance.
-Citizen 3 has 274020.36 remaining balance.
-Citizen 4 has 226864.06 remaining balance.
-Citizen 5 has 324462.91 remaining balance.
-Citizen 6 has 235179.96 remaining balance.
-Citizen 7 has 365399.75 remaining balance.
-Citizen 8 has 284173.53 remaining balance.
-Citizen 9 has 311778.45 remaining balance.
-Citizen 10 has 255603.09 remaining balance.
-After adding 10111.69 to each citizen, "Language_Center" is chosen.
-
-======================================================================
-Round 34
-======================================================================
-Project Animal_Shelter has no supporters, or is already funded.
-Project Basketball_Courts has no supporters, or is already funded.
-Project Bike_Lanes_Main_St has no supporters, or is already funded.
-Project Butterfly_Garden has no supporters, or is already funded.
-Project Chess_Club has no supporters, or is already funded.
-Project Coastal_Cleanup has no supporters, or is already funded.
-Project Community_Center has no supporters, or is already funded.
-Project Cultural_Festival has no supporters, or is already funded.
-Project Daycare_Center has no supporters, or is already funded.
-Project Dental_Clinic has no supporters, or is already funded.
 Project Dog_Park has no supporters, or is already funded.
 Project Emergency_Shelter has no supporters, or is already funded.
 Project Farmers_Market has no supporters, or is already funded.
@@ -1440,18 +1391,68 @@ Project Veterans_Memorial has no supporters, or is already funded.
 Project Vocational_School has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
 Chosen project: Theater_Renovation
-Amount added to each citizen: 8963.83
-Citizen 1 has 259999.72 remaining balance.
-Citizen 2 has 284396.68 remaining balance.
-Citizen 3 has 282984.18 remaining balance.
-Citizen 4 has 226864.06 remaining balance.
-Citizen 5 has 333426.74 remaining balance.
-Citizen 6 has 235179.96 remaining balance.
-Citizen 7 has 374363.58 remaining balance.
-Citizen 8 has 284173.53 remaining balance.
-Citizen 9 has 320742.28 remaining balance.
-Citizen 10 has 255603.09 remaining balance.
-After adding 8963.83 to each citizen, "Theater_Renovation" is chosen.
+Amount added to each citizen: 45293.17
+Citizen 1 has 0.00 remaining balance.
+Citizen 2 has 0.00 remaining balance.
+Citizen 3 has 170441.37 remaining balance.
+Citizen 4 has 0.00 remaining balance.
+Citizen 5 has 232793.17 remaining balance.
+Citizen 6 has 0.00 remaining balance.
+Citizen 7 has 45293.17 remaining balance.
+Citizen 8 has 0.00 remaining balance.
+Citizen 9 has 45293.17 remaining balance.
+Citizen 10 has 0.00 remaining balance.
+After adding 45293.17 to each citizen, "Theater_Renovation" is chosen.
+
+======================================================================
+Round 34
+======================================================================
+Project Animal_Shelter has no supporters, or is already funded.
+Project Basketball_Courts has no supporters, or is already funded.
+Project Bike_Lanes_Main_St has no supporters, or is already funded.
+Project Butterfly_Garden has no supporters, or is already funded.
+Project Chess_Club has no supporters, or is already funded.
+Project Coastal_Cleanup has no supporters, or is already funded.
+Project Community_Center has no supporters, or is already funded.
+Project Cultural_Festival has no supporters, or is already funded.
+Project Daycare_Center has no supporters, or is already funded.
+Project Dog_Park has no supporters, or is already funded.
+Project Emergency_Shelter has no supporters, or is already funded.
+Project Farmers_Market has no supporters, or is already funded.
+Project Food_Bank has no supporters, or is already funded.
+Project Green_Roof_Project has no supporters, or is already funded.
+Project Historic_Preservation has no supporters, or is already funded.
+Project Homeless_Support has no supporters, or is already funded.
+Project Language_Center has no supporters, or is already funded.
+Project Music_School has no supporters, or is already funded.
+Project New_Library has no supporters, or is already funded.
+Project Pedestrian_Bridge has no supporters, or is already funded.
+Project Playground_East has no supporters, or is already funded.
+Project Public_Park_North has no supporters, or is already funded.
+Project Rain_Garden has no supporters, or is already funded.
+Project Recycling_Center has no supporters, or is already funded.
+Project Robotics_Workshop has no supporters, or is already funded.
+Project Science_Lab has no supporters, or is already funded.
+Project Skate_Park has no supporters, or is already funded.
+Project Streetlight_Upgrade has no supporters, or is already funded.
+Project Theater_Renovation has no supporters, or is already funded.
+Project Urban_Garden has no supporters, or is already funded.
+Project Veterans_Memorial has no supporters, or is already funded.
+Project Vocational_School has no supporters, or is already funded.
+Project Youth_Center has no supporters, or is already funded.
+Chosen project: Dental_Clinic
+Amount added to each citizen: 229068.94
+Citizen 1 has 229068.94 remaining balance.
+Citizen 2 has 0.00 remaining balance.
+Citizen 3 has 399510.31 remaining balance.
+Citizen 4 has 229068.94 remaining balance.
+Citizen 5 has 0.00 remaining balance.
+Citizen 6 has 229068.94 remaining balance.
+Citizen 7 has 274362.12 remaining balance.
+Citizen 8 has 0.00 remaining balance.
+Citizen 9 has 274362.12 remaining balance.
+Citizen 10 has 229068.94 remaining balance.
+After adding 229068.94 to each citizen, "Dental_Clinic" is chosen.
 
 ======================================================================
 Round 35
@@ -1490,25 +1491,24 @@ Project Urban_Garden has no supporters, or is already funded.
 Project Veterans_Memorial has no supporters, or is already funded.
 Project Vocational_School has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: Autism_Center
-Amount added to each citizen: 7155.80
-Citizen 1 has 267155.52 remaining balance.
-Citizen 2 has 291552.48 remaining balance.
-Citizen 3 has 290139.99 remaining balance.
-Citizen 4 has 234019.86 remaining balance.
-Citizen 5 has 333426.74 remaining balance.
-Citizen 6 has 242335.76 remaining balance.
-Citizen 7 has 374363.58 remaining balance.
-Citizen 8 has 291329.33 remaining balance.
-Citizen 9 has 320742.28 remaining balance.
-Citizen 10 has 262758.89 remaining balance.
-After adding 7155.80 to each citizen, "Autism_Center" is chosen.
+Chosen project: Wetlands_Restoration
+Amount added to each citizen: 84264.39
+Citizen 1 has 313333.33 remaining balance.
+Citizen 2 has 84264.39 remaining balance.
+Citizen 3 has 483774.70 remaining balance.
+Citizen 4 has 0.00 remaining balance.
+Citizen 5 has 84264.39 remaining balance.
+Citizen 6 has 0.00 remaining balance.
+Citizen 7 has 358626.51 remaining balance.
+Citizen 8 has 84264.39 remaining balance.
+Citizen 9 has 358626.51 remaining balance.
+Citizen 10 has 0.00 remaining balance.
+After adding 84264.39 to each citizen, "Wetlands_Restoration" is chosen.
 
 ======================================================================
 Round 36
 ======================================================================
 Project Animal_Shelter has no supporters, or is already funded.
-Project Autism_Center has no supporters, or is already funded.
 Project Basketball_Courts has no supporters, or is already funded.
 Project Bike_Lanes_Main_St has no supporters, or is already funded.
 Project Butterfly_Garden has no supporters, or is already funded.
@@ -1541,26 +1541,27 @@ Project Theater_Renovation has no supporters, or is already funded.
 Project Urban_Garden has no supporters, or is already funded.
 Project Veterans_Memorial has no supporters, or is already funded.
 Project Vocational_School has no supporters, or is already funded.
+Project Wetlands_Restoration has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: Women_Shelter
-Amount added to each citizen: 7858.67
-Citizen 1 has 275014.19 remaining balance.
-Citizen 2 has 299411.16 remaining balance.
-Citizen 3 has 297998.66 remaining balance.
-Citizen 4 has 241878.54 remaining balance.
-Citizen 5 has 341285.41 remaining balance.
-Citizen 6 has 242335.76 remaining balance.
-Citizen 7 has 382222.25 remaining balance.
-Citizen 8 has 291329.33 remaining balance.
-Citizen 9 has 328600.95 remaining balance.
-Citizen 10 has 262758.89 remaining balance.
-After adding 7858.67 to each citizen, "Women_Shelter" is chosen.
+Chosen project: Amphitheater
+Amount added to each citizen: 41176.97
+Citizen 1 has 354510.31 remaining balance.
+Citizen 2 has 125441.37 remaining balance.
+Citizen 3 has 0.00 remaining balance.
+Citizen 4 has 41176.97 remaining balance.
+Citizen 5 has 0.00 remaining balance.
+Citizen 6 has 41176.97 remaining balance.
+Citizen 7 has 0.00 remaining balance.
+Citizen 8 has 125441.37 remaining balance.
+Citizen 9 has 0.00 remaining balance.
+Citizen 10 has 41176.97 remaining balance.
+After adding 41176.97 to each citizen, "Amphitheater" is chosen.
 
 ======================================================================
 Round 37
 ======================================================================
+Project Amphitheater has no supporters, or is already funded.
 Project Animal_Shelter has no supporters, or is already funded.
-Project Autism_Center has no supporters, or is already funded.
 Project Basketball_Courts has no supporters, or is already funded.
 Project Bike_Lanes_Main_St has no supporters, or is already funded.
 Project Butterfly_Garden has no supporters, or is already funded.
@@ -1593,28 +1594,27 @@ Project Theater_Renovation has no supporters, or is already funded.
 Project Urban_Garden has no supporters, or is already funded.
 Project Veterans_Memorial has no supporters, or is already funded.
 Project Vocational_School has no supporters, or is already funded.
-Project Women_Shelter has no supporters, or is already funded.
+Project Wetlands_Restoration has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: Amphitheater
-Amount added to each citizen: 24973.18
-Citizen 1 has 299987.37 remaining balance.
-Citizen 2 has 324384.34 remaining balance.
-Citizen 3 has 297998.66 remaining balance.
-Citizen 4 has 266851.72 remaining balance.
-Citizen 5 has 341285.41 remaining balance.
-Citizen 6 has 267308.94 remaining balance.
-Citizen 7 has 382222.25 remaining balance.
-Citizen 8 has 316302.51 remaining balance.
-Citizen 9 has 328600.95 remaining balance.
-Citizen 10 has 287732.07 remaining balance.
-After adding 24973.18 to each citizen, "Amphitheater" is chosen.
+Chosen project: Senior_Home
+Amount added to each citizen: 178512.67
+Citizen 1 has 0.00 remaining balance.
+Citizen 2 has 0.00 remaining balance.
+Citizen 3 has 178512.67 remaining balance.
+Citizen 4 has 0.00 remaining balance.
+Citizen 5 has 178512.67 remaining balance.
+Citizen 6 has 0.00 remaining balance.
+Citizen 7 has 178512.67 remaining balance.
+Citizen 8 has 0.00 remaining balance.
+Citizen 9 has 178512.67 remaining balance.
+Citizen 10 has 0.00 remaining balance.
+After adding 178512.67 to each citizen, "Senior_Home" is chosen.
 
 ======================================================================
 Round 38
 ======================================================================
 Project Amphitheater has no supporters, or is already funded.
 Project Animal_Shelter has no supporters, or is already funded.
-Project Autism_Center has no supporters, or is already funded.
 Project Basketball_Courts has no supporters, or is already funded.
 Project Bike_Lanes_Main_St has no supporters, or is already funded.
 Project Butterfly_Garden has no supporters, or is already funded.
@@ -1641,27 +1641,28 @@ Project Rain_Garden has no supporters, or is already funded.
 Project Recycling_Center has no supporters, or is already funded.
 Project Robotics_Workshop has no supporters, or is already funded.
 Project Science_Lab has no supporters, or is already funded.
+Project Senior_Home has no supporters, or is already funded.
 Project Skate_Park has no supporters, or is already funded.
 Project Streetlight_Upgrade has no supporters, or is already funded.
 Project Theater_Renovation has no supporters, or is already funded.
 Project Urban_Garden has no supporters, or is already funded.
 Project Veterans_Memorial has no supporters, or is already funded.
 Project Vocational_School has no supporters, or is already funded.
-Project Women_Shelter has no supporters, or is already funded.
+Project Wetlands_Restoration has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: Senior_Home
-Amount added to each citizen: 6238.84
-Citizen 1 has 299987.37 remaining balance.
-Citizen 2 has 324384.34 remaining balance.
-Citizen 3 has 304237.50 remaining balance.
-Citizen 4 has 266851.72 remaining balance.
-Citizen 5 has 347524.25 remaining balance.
-Citizen 6 has 267308.94 remaining balance.
-Citizen 7 has 388461.09 remaining balance.
-Citizen 8 has 316302.51 remaining balance.
-Citizen 9 has 334839.79 remaining balance.
-Citizen 10 has 287732.07 remaining balance.
-After adding 6238.84 to each citizen, "Senior_Home" is chosen.
+Chosen project: Autism_Center
+Amount added to each citizen: 171487.33
+Citizen 1 has 171487.33 remaining balance.
+Citizen 2 has 171487.33 remaining balance.
+Citizen 3 has 350000.00 remaining balance.
+Citizen 4 has 171487.33 remaining balance.
+Citizen 5 has 0.00 remaining balance.
+Citizen 6 has 171487.33 remaining balance.
+Citizen 7 has 0.00 remaining balance.
+Citizen 8 has 171487.33 remaining balance.
+Citizen 9 has 0.00 remaining balance.
+Citizen 10 has 171487.33 remaining balance.
+After adding 171487.33 to each citizen, "Autism_Center" is chosen.
 
 ======================================================================
 Round 39
@@ -1702,21 +1703,21 @@ Project Theater_Renovation has no supporters, or is already funded.
 Project Urban_Garden has no supporters, or is already funded.
 Project Veterans_Memorial has no supporters, or is already funded.
 Project Vocational_School has no supporters, or is already funded.
-Project Women_Shelter has no supporters, or is already funded.
+Project Wetlands_Restoration has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: Medical_Clinic
-Amount added to each citizen: 39062.39
-Citizen 1 has 299987.37 remaining balance.
-Citizen 2 has 363446.73 remaining balance.
-Citizen 3 has 304237.50 remaining balance.
-Citizen 4 has 266851.72 remaining balance.
-Citizen 5 has 386586.64 remaining balance.
-Citizen 6 has 267308.94 remaining balance.
-Citizen 7 has 427523.48 remaining balance.
-Citizen 8 has 316302.51 remaining balance.
-Citizen 9 has 373902.18 remaining balance.
-Citizen 10 has 326794.46 remaining balance.
-After adding 39062.39 to each citizen, "Medical_Clinic" is chosen.
+Chosen project: Women_Shelter
+Amount added to each citizen: 101846.01
+Citizen 1 has 273333.33 remaining balance.
+Citizen 2 has 273333.33 remaining balance.
+Citizen 3 has 451846.01 remaining balance.
+Citizen 4 has 273333.33 remaining balance.
+Citizen 5 has 101846.01 remaining balance.
+Citizen 6 has 0.00 remaining balance.
+Citizen 7 has 101846.01 remaining balance.
+Citizen 8 has 0.00 remaining balance.
+Citizen 9 has 101846.01 remaining balance.
+Citizen 10 has 0.00 remaining balance.
+After adding 101846.01 to each citizen, "Women_Shelter" is chosen.
 
 ======================================================================
 Round 40
@@ -1741,7 +1742,6 @@ Project Green_Roof_Project has no supporters, or is already funded.
 Project Historic_Preservation has no supporters, or is already funded.
 Project Homeless_Support has no supporters, or is already funded.
 Project Language_Center has no supporters, or is already funded.
-Project Medical_Clinic has no supporters, or is already funded.
 Project Music_School has no supporters, or is already funded.
 Project New_Library has no supporters, or is already funded.
 Project Pedestrian_Bridge has no supporters, or is already funded.
@@ -1758,21 +1758,22 @@ Project Theater_Renovation has no supporters, or is already funded.
 Project Urban_Garden has no supporters, or is already funded.
 Project Veterans_Memorial has no supporters, or is already funded.
 Project Vocational_School has no supporters, or is already funded.
+Project Wetlands_Restoration has no supporters, or is already funded.
 Project Women_Shelter has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: Swimming_Pool
-Amount added to each citizen: 9710.72
-Citizen 1 has 299987.37 remaining balance.
-Citizen 2 has 363446.73 remaining balance.
-Citizen 3 has 313948.22 remaining balance.
-Citizen 4 has 276562.44 remaining balance.
-Citizen 5 has 386586.64 remaining balance.
-Citizen 6 has 277019.66 remaining balance.
-Citizen 7 has 427523.48 remaining balance.
-Citizen 8 has 326013.23 remaining balance.
-Citizen 9 has 373902.18 remaining balance.
-Citizen 10 has 336505.18 remaining balance.
-After adding 9710.72 to each citizen, "Swimming_Pool" is chosen.
+Chosen project: Medical_Clinic
+Amount added to each citizen: 130297.47
+Citizen 1 has 0.00 remaining balance.
+Citizen 2 has 403630.80 remaining balance.
+Citizen 3 has 0.00 remaining balance.
+Citizen 4 has 0.00 remaining balance.
+Citizen 5 has 232143.47 remaining balance.
+Citizen 6 has 0.00 remaining balance.
+Citizen 7 has 232143.47 remaining balance.
+Citizen 8 has 0.00 remaining balance.
+Citizen 9 has 232143.47 remaining balance.
+Citizen 10 has 130297.47 remaining balance.
+After adding 130297.47 to each citizen, "Medical_Clinic" is chosen.
 
 ======================================================================
 Round 41
@@ -1810,26 +1811,26 @@ Project Science_Lab has no supporters, or is already funded.
 Project Senior_Home has no supporters, or is already funded.
 Project Skate_Park has no supporters, or is already funded.
 Project Streetlight_Upgrade has no supporters, or is already funded.
-Project Swimming_Pool has no supporters, or is already funded.
 Project Theater_Renovation has no supporters, or is already funded.
 Project Urban_Garden has no supporters, or is already funded.
 Project Veterans_Memorial has no supporters, or is already funded.
 Project Vocational_School has no supporters, or is already funded.
+Project Wetlands_Restoration has no supporters, or is already funded.
 Project Women_Shelter has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: Wetlands_Restoration
-Amount added to each citizen: 16637.57
-Citizen 1 has 316624.95 remaining balance.
-Citizen 2 has 380084.30 remaining balance.
-Citizen 3 has 330585.79 remaining balance.
-Citizen 4 has 276562.44 remaining balance.
-Citizen 5 has 403224.21 remaining balance.
-Citizen 6 has 277019.66 remaining balance.
-Citizen 7 has 444161.05 remaining balance.
-Citizen 8 has 342650.80 remaining balance.
-Citizen 9 has 390539.75 remaining balance.
-Citizen 10 has 336505.18 remaining balance.
-After adding 16637.57 to each citizen, "Wetlands_Restoration" is chosen.
+Chosen project: Swimming_Pool
+Amount added to each citizen: 159987.76
+Citizen 1 has 0.00 remaining balance.
+Citizen 2 has 0.00 remaining balance.
+Citizen 3 has 159987.76 remaining balance.
+Citizen 4 has 159987.76 remaining balance.
+Citizen 5 has 0.00 remaining balance.
+Citizen 6 has 159987.76 remaining balance.
+Citizen 7 has 0.00 remaining balance.
+Citizen 8 has 159987.76 remaining balance.
+Citizen 9 has 0.00 remaining balance.
+Citizen 10 has 290285.22 remaining balance.
+After adding 159987.76 to each citizen, "Swimming_Pool" is chosen.
 
 ======================================================================
 Round 42
@@ -1876,18 +1877,18 @@ Project Wetlands_Restoration has no supporters, or is already funded.
 Project Women_Shelter has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
 Chosen project: Meditation_Garden
-Amount added to each citizen: 73494.82
-Citizen 1 has 390119.76 remaining balance.
-Citizen 2 has 453579.12 remaining balance.
-Citizen 3 has 404080.61 remaining balance.
-Citizen 4 has 350057.26 remaining balance.
-Citizen 5 has 476719.03 remaining balance.
-Citizen 6 has 350514.48 remaining balance.
-Citizen 7 has 517655.87 remaining balance.
-Citizen 8 has 416145.62 remaining balance.
-Citizen 9 has 464034.57 remaining balance.
-Citizen 10 has 336505.18 remaining balance.
-After adding 73494.82 to each citizen, "Meditation_Garden" is chosen.
+Amount added to each citizen: 119714.78
+Citizen 1 has 119714.78 remaining balance.
+Citizen 2 has 119714.78 remaining balance.
+Citizen 3 has 279702.53 remaining balance.
+Citizen 4 has 279702.53 remaining balance.
+Citizen 5 has 119714.78 remaining balance.
+Citizen 6 has 279702.53 remaining balance.
+Citizen 7 has 119714.78 remaining balance.
+Citizen 8 has 279702.53 remaining balance.
+Citizen 9 has 119714.78 remaining balance.
+Citizen 10 has 0.00 remaining balance.
+After adding 119714.78 to each citizen, "Meditation_Garden" is chosen.
 
 ======================================================================
 Round 43
@@ -1935,18 +1936,18 @@ Project Wetlands_Restoration has no supporters, or is already funded.
 Project Women_Shelter has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
 Chosen project: Art_Museum
-Amount added to each citizen: 27916.75
-Citizen 1 has 390119.76 remaining balance.
-Citizen 2 has 453579.12 remaining balance.
-Citizen 3 has 431997.36 remaining balance.
-Citizen 4 has 350057.26 remaining balance.
-Citizen 5 has 504635.78 remaining balance.
-Citizen 6 has 350514.48 remaining balance.
-Citizen 7 has 545572.62 remaining balance.
-Citizen 8 has 416145.62 remaining balance.
-Citizen 9 has 491951.32 remaining balance.
-Citizen 10 has 364421.94 remaining balance.
-After adding 27916.75 to each citizen, "Art_Museum" is chosen.
+Amount added to each citizen: 204292.57
+Citizen 1 has 0.00 remaining balance.
+Citizen 2 has 0.00 remaining balance.
+Citizen 3 has 483995.10 remaining balance.
+Citizen 4 has 0.00 remaining balance.
+Citizen 5 has 324007.35 remaining balance.
+Citizen 6 has 0.00 remaining balance.
+Citizen 7 has 324007.35 remaining balance.
+Citizen 8 has 0.00 remaining balance.
+Citizen 9 has 324007.35 remaining balance.
+Citizen 10 has 204292.57 remaining balance.
+After adding 204292.57 to each citizen, "Art_Museum" is chosen.
 
 ======================================================================
 Round 44
@@ -1995,18 +1996,18 @@ Project Wetlands_Restoration has no supporters, or is already funded.
 Project Women_Shelter has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
 Chosen project: Sports_Complex
-Amount added to each citizen: 27144.63
-Citizen 1 has 390119.76 remaining balance.
-Citizen 2 has 480723.75 remaining balance.
-Citizen 3 has 431997.36 remaining balance.
-Citizen 4 has 377201.89 remaining balance.
-Citizen 5 has 504635.78 remaining balance.
-Citizen 6 has 377659.11 remaining balance.
-Citizen 7 has 545572.62 remaining balance.
-Citizen 8 has 443290.25 remaining balance.
-Citizen 9 has 491951.32 remaining balance.
-Citizen 10 has 391566.57 remaining balance.
-After adding 27144.63 to each citizen, "Sports_Complex" is chosen.
+Amount added to each citizen: 208796.57
+Citizen 1 has 0.00 remaining balance.
+Citizen 2 has 208796.57 remaining balance.
+Citizen 3 has 0.00 remaining balance.
+Citizen 4 has 208796.57 remaining balance.
+Citizen 5 has 0.00 remaining balance.
+Citizen 6 has 208796.57 remaining balance.
+Citizen 7 has 0.00 remaining balance.
+Citizen 8 has 208796.57 remaining balance.
+Citizen 9 has 0.00 remaining balance.
+Citizen 10 has 413089.14 remaining balance.
+After adding 208796.57 to each citizen, "Sports_Complex" is chosen.
 
 ======================================================================
 Round 45
@@ -2055,19 +2056,19 @@ Project Vocational_School has no supporters, or is already funded.
 Project Wetlands_Restoration has no supporters, or is already funded.
 Project Women_Shelter has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: School_Expansion
-Amount added to each citizen: 26201.05
-Citizen 1 has 390119.76 remaining balance.
-Citizen 2 has 480723.75 remaining balance.
-Citizen 3 has 458198.41 remaining balance.
-Citizen 4 has 377201.89 remaining balance.
-Citizen 5 has 530836.83 remaining balance.
-Citizen 6 has 377659.11 remaining balance.
-Citizen 7 has 571773.67 remaining balance.
-Citizen 8 has 443290.25 remaining balance.
-Citizen 9 has 518152.37 remaining balance.
-Citizen 10 has 417767.61 remaining balance.
-After adding 26201.05 to each citizen, "School_Expansion" is chosen.
+Chosen project: Makerspace
+Amount added to each citizen: 174057.14
+Citizen 1 has 174057.14 remaining balance.
+Citizen 2 has 382853.72 remaining balance.
+Citizen 3 has 174057.14 remaining balance.
+Citizen 4 has 382853.72 remaining balance.
+Citizen 5 has 174057.14 remaining balance.
+Citizen 6 has 382853.72 remaining balance.
+Citizen 7 has 174057.14 remaining balance.
+Citizen 8 has 0.00 remaining balance.
+Citizen 9 has 174057.14 remaining balance.
+Citizen 10 has 0.00 remaining balance.
+After adding 174057.14 to each citizen, "Makerspace" is chosen.
 
 ======================================================================
 Round 46
@@ -2093,6 +2094,7 @@ Project Green_Roof_Project has no supporters, or is already funded.
 Project Historic_Preservation has no supporters, or is already funded.
 Project Homeless_Support has no supporters, or is already funded.
 Project Language_Center has no supporters, or is already funded.
+Project Makerspace has no supporters, or is already funded.
 Project Medical_Clinic has no supporters, or is already funded.
 Project Meditation_Garden has no supporters, or is already funded.
 Project Music_School has no supporters, or is already funded.
@@ -2103,7 +2105,6 @@ Project Public_Park_North has no supporters, or is already funded.
 Project Rain_Garden has no supporters, or is already funded.
 Project Recycling_Center has no supporters, or is already funded.
 Project Robotics_Workshop has no supporters, or is already funded.
-Project School_Expansion has no supporters, or is already funded.
 Project Science_Lab has no supporters, or is already funded.
 Project Senior_Home has no supporters, or is already funded.
 Project Skate_Park has no supporters, or is already funded.
@@ -2117,19 +2118,19 @@ Project Vocational_School has no supporters, or is already funded.
 Project Wetlands_Restoration has no supporters, or is already funded.
 Project Women_Shelter has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: Innovation_Lab
-Amount added to each citizen: 33520.28
-Citizen 1 has 423640.05 remaining balance.
-Citizen 2 has 514244.03 remaining balance.
-Citizen 3 has 491718.69 remaining balance.
-Citizen 4 has 377201.89 remaining balance.
-Citizen 5 has 564357.12 remaining balance.
-Citizen 6 has 377659.11 remaining balance.
-Citizen 7 has 605293.96 remaining balance.
-Citizen 8 has 443290.25 remaining balance.
-Citizen 9 has 551672.65 remaining balance.
-Citizen 10 has 417767.61 remaining balance.
-After adding 33520.28 to each citizen, "Innovation_Lab" is chosen.
+Chosen project: School_Expansion
+Amount added to each citizen: 175476.34
+Citizen 1 has 0.00 remaining balance.
+Citizen 2 has 0.00 remaining balance.
+Citizen 3 has 349533.49 remaining balance.
+Citizen 4 has 0.00 remaining balance.
+Citizen 5 has 349533.49 remaining balance.
+Citizen 6 has 0.00 remaining balance.
+Citizen 7 has 349533.49 remaining balance.
+Citizen 8 has 0.00 remaining balance.
+Citizen 9 has 349533.49 remaining balance.
+Citizen 10 has 175476.34 remaining balance.
+After adding 175476.34 to each citizen, "School_Expansion" is chosen.
 
 ======================================================================
 Round 47
@@ -2154,8 +2155,8 @@ Project Food_Bank has no supporters, or is already funded.
 Project Green_Roof_Project has no supporters, or is already funded.
 Project Historic_Preservation has no supporters, or is already funded.
 Project Homeless_Support has no supporters, or is already funded.
-Project Innovation_Lab has no supporters, or is already funded.
 Project Language_Center has no supporters, or is already funded.
+Project Makerspace has no supporters, or is already funded.
 Project Medical_Clinic has no supporters, or is already funded.
 Project Meditation_Garden has no supporters, or is already funded.
 Project Music_School has no supporters, or is already funded.
@@ -2180,19 +2181,19 @@ Project Vocational_School has no supporters, or is already funded.
 Project Wetlands_Restoration has no supporters, or is already funded.
 Project Women_Shelter has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: Tech_Hub
-Amount added to each citizen: 41032.84
-Citizen 1 has 423640.05 remaining balance.
-Citizen 2 has 514244.03 remaining balance.
-Citizen 3 has 532751.54 remaining balance.
-Citizen 4 has 377201.89 remaining balance.
-Citizen 5 has 605389.96 remaining balance.
-Citizen 6 has 377659.11 remaining balance.
-Citizen 7 has 646326.80 remaining balance.
-Citizen 8 has 443290.25 remaining balance.
-Citizen 9 has 592705.50 remaining balance.
-Citizen 10 has 417767.61 remaining balance.
-After adding 41032.84 to each citizen, "Tech_Hub" is chosen.
+Chosen project: Police_Station
+Amount added to each citizen: 340373.21
+Citizen 1 has 340373.21 remaining balance.
+Citizen 2 has 0.00 remaining balance.
+Citizen 3 has 0.00 remaining balance.
+Citizen 4 has 340373.21 remaining balance.
+Citizen 5 has 0.00 remaining balance.
+Citizen 6 has 340373.21 remaining balance.
+Citizen 7 has 0.00 remaining balance.
+Citizen 8 has 340373.21 remaining balance.
+Citizen 9 has 0.00 remaining balance.
+Citizen 10 has 515849.55 remaining balance.
+After adding 340373.21 to each citizen, "Police_Station" is chosen.
 
 ======================================================================
 Round 48
@@ -2217,14 +2218,15 @@ Project Food_Bank has no supporters, or is already funded.
 Project Green_Roof_Project has no supporters, or is already funded.
 Project Historic_Preservation has no supporters, or is already funded.
 Project Homeless_Support has no supporters, or is already funded.
-Project Innovation_Lab has no supporters, or is already funded.
 Project Language_Center has no supporters, or is already funded.
+Project Makerspace has no supporters, or is already funded.
 Project Medical_Clinic has no supporters, or is already funded.
 Project Meditation_Garden has no supporters, or is already funded.
 Project Music_School has no supporters, or is already funded.
 Project New_Library has no supporters, or is already funded.
 Project Pedestrian_Bridge has no supporters, or is already funded.
 Project Playground_East has no supporters, or is already funded.
+Project Police_Station has no supporters, or is already funded.
 Project Public_Park_North has no supporters, or is already funded.
 Project Rain_Garden has no supporters, or is already funded.
 Project Recycling_Center has no supporters, or is already funded.
@@ -2236,7 +2238,6 @@ Project Skate_Park has no supporters, or is already funded.
 Project Sports_Complex has no supporters, or is already funded.
 Project Streetlight_Upgrade has no supporters, or is already funded.
 Project Swimming_Pool has no supporters, or is already funded.
-Project Tech_Hub has no supporters, or is already funded.
 Project Theater_Renovation has no supporters, or is already funded.
 Project Urban_Garden has no supporters, or is already funded.
 Project Veterans_Memorial has no supporters, or is already funded.
@@ -2244,19 +2245,19 @@ Project Vocational_School has no supporters, or is already funded.
 Project Wetlands_Restoration has no supporters, or is already funded.
 Project Women_Shelter has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: Police_Station
-Amount added to each citizen: 41716.44
-Citizen 1 has 465356.48 remaining balance.
-Citizen 2 has 514244.03 remaining balance.
-Citizen 3 has 532751.54 remaining balance.
-Citizen 4 has 418918.32 remaining balance.
-Citizen 5 has 605389.96 remaining balance.
-Citizen 6 has 419375.55 remaining balance.
-Citizen 7 has 646326.80 remaining balance.
-Citizen 8 has 485006.69 remaining balance.
-Citizen 9 has 592705.50 remaining balance.
-Citizen 10 has 459484.05 remaining balance.
-After adding 41716.44 to each citizen, "Police_Station" is chosen.
+Chosen project: Innovation_Lab
+Amount added to each citizen: 53257.70
+Citizen 1 has 393630.91 remaining balance.
+Citizen 2 has 53257.70 remaining balance.
+Citizen 3 has 53257.70 remaining balance.
+Citizen 4 has 0.00 remaining balance.
+Citizen 5 has 53257.70 remaining balance.
+Citizen 6 has 0.00 remaining balance.
+Citizen 7 has 53257.70 remaining balance.
+Citizen 8 has 0.00 remaining balance.
+Citizen 9 has 53257.70 remaining balance.
+Citizen 10 has 0.00 remaining balance.
+After adding 53257.70 to each citizen, "Innovation_Lab" is chosen.
 
 ======================================================================
 Round 49
@@ -2283,6 +2284,7 @@ Project Historic_Preservation has no supporters, or is already funded.
 Project Homeless_Support has no supporters, or is already funded.
 Project Innovation_Lab has no supporters, or is already funded.
 Project Language_Center has no supporters, or is already funded.
+Project Makerspace has no supporters, or is already funded.
 Project Medical_Clinic has no supporters, or is already funded.
 Project Meditation_Garden has no supporters, or is already funded.
 Project Music_School has no supporters, or is already funded.
@@ -2301,7 +2303,6 @@ Project Skate_Park has no supporters, or is already funded.
 Project Sports_Complex has no supporters, or is already funded.
 Project Streetlight_Upgrade has no supporters, or is already funded.
 Project Swimming_Pool has no supporters, or is already funded.
-Project Tech_Hub has no supporters, or is already funded.
 Project Theater_Renovation has no supporters, or is already funded.
 Project Urban_Garden has no supporters, or is already funded.
 Project Veterans_Memorial has no supporters, or is already funded.
@@ -2309,19 +2310,19 @@ Project Vocational_School has no supporters, or is already funded.
 Project Wetlands_Restoration has no supporters, or is already funded.
 Project Women_Shelter has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: Makerspace
-Amount added to each citizen: 12754.63
-Citizen 1 has 478111.11 remaining balance.
-Citizen 2 has 526998.66 remaining balance.
-Citizen 3 has 545506.17 remaining balance.
-Citizen 4 has 431672.95 remaining balance.
-Citizen 5 has 618144.59 remaining balance.
-Citizen 6 has 432130.18 remaining balance.
-Citizen 7 has 659081.43 remaining balance.
-Citizen 8 has 485006.69 remaining balance.
-Citizen 9 has 605460.13 remaining balance.
-Citizen 10 has 459484.05 remaining balance.
-After adding 12754.63 to each citizen, "Makerspace" is chosen.
+Chosen project: Tech_Hub
+Amount added to each citizen: 392185.23
+Citizen 1 has 0.00 remaining balance.
+Citizen 2 has 0.00 remaining balance.
+Citizen 3 has 445442.93 remaining balance.
+Citizen 4 has 0.00 remaining balance.
+Citizen 5 has 445442.93 remaining balance.
+Citizen 6 has 0.00 remaining balance.
+Citizen 7 has 445442.93 remaining balance.
+Citizen 8 has 0.00 remaining balance.
+Citizen 9 has 445442.93 remaining balance.
+Citizen 10 has 0.00 remaining balance.
+After adding 392185.23 to each citizen, "Tech_Hub" is chosen.
 
 ======================================================================
 Round 50
@@ -2375,19 +2376,19 @@ Project Vocational_School has no supporters, or is already funded.
 Project Wetlands_Restoration has no supporters, or is already funded.
 Project Women_Shelter has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: Solar_Farm
-Amount added to each citizen: 64432.73
-Citizen 1 has 478111.11 remaining balance.
-Citizen 2 has 526998.66 remaining balance.
-Citizen 3 has 609938.89 remaining balance.
-Citizen 4 has 431672.95 remaining balance.
-Citizen 5 has 682577.31 remaining balance.
-Citizen 6 has 432130.18 remaining balance.
-Citizen 7 has 723514.16 remaining balance.
-Citizen 8 has 485006.69 remaining balance.
-Citizen 9 has 669892.85 remaining balance.
-Citizen 10 has 459484.05 remaining balance.
-After adding 64432.73 to each citizen, "Solar_Farm" is chosen.
+Chosen project: Fire_Station
+Amount added to each citizen: 340917.80
+Citizen 1 has 0.00 remaining balance.
+Citizen 2 has 340917.80 remaining balance.
+Citizen 3 has 0.00 remaining balance.
+Citizen 4 has 340917.80 remaining balance.
+Citizen 5 has 0.00 remaining balance.
+Citizen 6 has 340917.80 remaining balance.
+Citizen 7 has 0.00 remaining balance.
+Citizen 8 has 340917.80 remaining balance.
+Citizen 9 has 786360.73 remaining balance.
+Citizen 10 has 340917.80 remaining balance.
+After adding 340917.80 to each citizen, "Fire_Station" is chosen.
 
 ======================================================================
 Round 51
@@ -2408,6 +2409,7 @@ Project Dental_Clinic has no supporters, or is already funded.
 Project Dog_Park has no supporters, or is already funded.
 Project Emergency_Shelter has no supporters, or is already funded.
 Project Farmers_Market has no supporters, or is already funded.
+Project Fire_Station has no supporters, or is already funded.
 Project Food_Bank has no supporters, or is already funded.
 Project Green_Roof_Project has no supporters, or is already funded.
 Project Historic_Preservation has no supporters, or is already funded.
@@ -2430,7 +2432,6 @@ Project School_Expansion has no supporters, or is already funded.
 Project Science_Lab has no supporters, or is already funded.
 Project Senior_Home has no supporters, or is already funded.
 Project Skate_Park has no supporters, or is already funded.
-Project Solar_Farm has no supporters, or is already funded.
 Project Sports_Complex has no supporters, or is already funded.
 Project Streetlight_Upgrade has no supporters, or is already funded.
 Project Swimming_Pool has no supporters, or is already funded.
@@ -2442,19 +2443,19 @@ Project Vocational_School has no supporters, or is already funded.
 Project Wetlands_Restoration has no supporters, or is already funded.
 Project Women_Shelter has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: Fire_Station
-Amount added to each citizen: 51464.63
-Citizen 1 has 478111.11 remaining balance.
-Citizen 2 has 578463.29 remaining balance.
-Citizen 3 has 609938.89 remaining balance.
-Citizen 4 has 483137.58 remaining balance.
-Citizen 5 has 682577.31 remaining balance.
-Citizen 6 has 483594.81 remaining balance.
-Citizen 7 has 723514.16 remaining balance.
-Citizen 8 has 536471.32 remaining balance.
-Citizen 9 has 721357.48 remaining balance.
-Citizen 10 has 510948.68 remaining balance.
-After adding 51464.63 to each citizen, "Fire_Station" is chosen.
+Chosen project: Solar_Farm
+Amount added to each citizen: 249235.17
+Citizen 1 has 0.00 remaining balance.
+Citizen 2 has 0.00 remaining balance.
+Citizen 3 has 249235.17 remaining balance.
+Citizen 4 has 0.00 remaining balance.
+Citizen 5 has 249235.17 remaining balance.
+Citizen 6 has 0.00 remaining balance.
+Citizen 7 has 249235.17 remaining balance.
+Citizen 8 has 0.00 remaining balance.
+Citizen 9 has 1035595.90 remaining balance.
+Citizen 10 has 0.00 remaining balance.
+After adding 249235.17 to each citizen, "Solar_Farm" is chosen.
 
 ======================================================================
 Round 52
@@ -2510,19 +2511,19 @@ Project Vocational_School has no supporters, or is already funded.
 Project Wetlands_Restoration has no supporters, or is already funded.
 Project Women_Shelter has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: Water_Treatment
-Amount added to each citizen: 56829.77
-Citizen 1 has 534940.89 remaining balance.
-Citizen 2 has 578463.29 remaining balance.
-Citizen 3 has 609938.89 remaining balance.
-Citizen 4 has 539967.36 remaining balance.
-Citizen 5 has 682577.31 remaining balance.
-Citizen 6 has 540424.58 remaining balance.
-Citizen 7 has 723514.16 remaining balance.
-Citizen 8 has 593301.09 remaining balance.
-Citizen 9 has 721357.48 remaining balance.
-Citizen 10 has 567778.45 remaining balance.
-After adding 56829.77 to each citizen, "Water_Treatment" is chosen.
+Chosen project: Business_Incubator
+Amount added to each citizen: 147584.47
+Citizen 1 has 147584.47 remaining balance.
+Citizen 2 has 147584.47 remaining balance.
+Citizen 3 has 396819.63 remaining balance.
+Citizen 4 has 147584.47 remaining balance.
+Citizen 5 has 396819.63 remaining balance.
+Citizen 6 has 147584.47 remaining balance.
+Citizen 7 has 0.00 remaining balance.
+Citizen 8 has 147584.47 remaining balance.
+Citizen 9 has 0.00 remaining balance.
+Citizen 10 has 147584.47 remaining balance.
+After adding 147584.47 to each citizen, "Business_Incubator" is chosen.
 
 ======================================================================
 Round 53
@@ -2533,6 +2534,7 @@ Project Art_Museum has no supporters, or is already funded.
 Project Autism_Center has no supporters, or is already funded.
 Project Basketball_Courts has no supporters, or is already funded.
 Project Bike_Lanes_Main_St has no supporters, or is already funded.
+Project Business_Incubator has no supporters, or is already funded.
 Project Butterfly_Garden has no supporters, or is already funded.
 Project Chess_Club has no supporters, or is already funded.
 Project Coastal_Cleanup has no supporters, or is already funded.
@@ -2575,23 +2577,22 @@ Project Theater_Renovation has no supporters, or is already funded.
 Project Urban_Garden has no supporters, or is already funded.
 Project Veterans_Memorial has no supporters, or is already funded.
 Project Vocational_School has no supporters, or is already funded.
-Project Water_Treatment has no supporters, or is already funded.
 Project Wetlands_Restoration has no supporters, or is already funded.
 Project Women_Shelter has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: Business_Incubator
-Amount added to each citizen: 67564.18
-Citizen 1 has 602505.07 remaining balance.
-Citizen 2 has 646027.47 remaining balance.
-Citizen 3 has 677503.07 remaining balance.
-Citizen 4 has 607531.54 remaining balance.
-Citizen 5 has 750141.50 remaining balance.
-Citizen 6 has 607988.76 remaining balance.
-Citizen 7 has 723514.16 remaining balance.
-Citizen 8 has 660865.27 remaining balance.
-Citizen 9 has 721357.48 remaining balance.
-Citizen 10 has 635342.63 remaining balance.
-After adding 67564.18 to each citizen, "Business_Incubator" is chosen.
+Chosen project: Water_Treatment
+Amount added to each citizen: 531755.25
+Citizen 1 has 679339.72 remaining balance.
+Citizen 2 has 0.00 remaining balance.
+Citizen 3 has 0.00 remaining balance.
+Citizen 4 has 679339.72 remaining balance.
+Citizen 5 has 0.00 remaining balance.
+Citizen 6 has 679339.72 remaining balance.
+Citizen 7 has 0.00 remaining balance.
+Citizen 8 has 679339.72 remaining balance.
+Citizen 9 has 0.00 remaining balance.
+Citizen 10 has 679339.72 remaining balance.
+After adding 531755.25 to each citizen, "Water_Treatment" is chosen.
 
 ======================================================================
 Round 54
@@ -2649,19 +2650,19 @@ Project Water_Treatment has no supporters, or is already funded.
 Project Wetlands_Restoration has no supporters, or is already funded.
 Project Women_Shelter has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: Public_Transport
-Amount added to each citizen: 196291.26
-Citizen 1 has 798796.33 remaining balance.
-Citizen 2 has 646027.47 remaining balance.
-Citizen 3 has 677503.07 remaining balance.
-Citizen 4 has 803822.80 remaining balance.
-Citizen 5 has 750141.50 remaining balance.
-Citizen 6 has 804280.03 remaining balance.
-Citizen 7 has 723514.16 remaining balance.
-Citizen 8 has 857156.53 remaining balance.
-Citizen 9 has 721357.48 remaining balance.
-Citizen 10 has 831633.90 remaining balance.
-After adding 196291.26 to each citizen, "Public_Transport" is chosen.
+Chosen project: Convention_Center
+Amount added to each citizen: 465495.21
+Citizen 1 has 1144834.93 remaining balance.
+Citizen 2 has 0.00 remaining balance.
+Citizen 3 has 465495.21 remaining balance.
+Citizen 4 has 0.00 remaining balance.
+Citizen 5 has 465495.21 remaining balance.
+Citizen 6 has 0.00 remaining balance.
+Citizen 7 has 465495.21 remaining balance.
+Citizen 8 has 1144834.93 remaining balance.
+Citizen 9 has 465495.21 remaining balance.
+Citizen 10 has 0.00 remaining balance.
+After adding 465495.21 to each citizen, "Convention_Center" is chosen.
 
 ======================================================================
 Round 55
@@ -2677,6 +2678,7 @@ Project Butterfly_Garden has no supporters, or is already funded.
 Project Chess_Club has no supporters, or is already funded.
 Project Coastal_Cleanup has no supporters, or is already funded.
 Project Community_Center has no supporters, or is already funded.
+Project Convention_Center has no supporters, or is already funded.
 Project Cultural_Festival has no supporters, or is already funded.
 Project Daycare_Center has no supporters, or is already funded.
 Project Dental_Clinic has no supporters, or is already funded.
@@ -2699,7 +2701,6 @@ Project Pedestrian_Bridge has no supporters, or is already funded.
 Project Playground_East has no supporters, or is already funded.
 Project Police_Station has no supporters, or is already funded.
 Project Public_Park_North has no supporters, or is already funded.
-Project Public_Transport has no supporters, or is already funded.
 Project Rain_Garden has no supporters, or is already funded.
 Project Recycling_Center has no supporters, or is already funded.
 Project Robotics_Workshop has no supporters, or is already funded.
@@ -2720,19 +2721,19 @@ Project Water_Treatment has no supporters, or is already funded.
 Project Wetlands_Restoration has no supporters, or is already funded.
 Project Women_Shelter has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: Convention_Center
-Amount added to each citizen: 203558.95
-Citizen 1 has 1002355.28 remaining balance.
-Citizen 2 has 646027.47 remaining balance.
-Citizen 3 has 881062.02 remaining balance.
-Citizen 4 has 803822.80 remaining balance.
-Citizen 5 has 953700.45 remaining balance.
-Citizen 6 has 804280.03 remaining balance.
-Citizen 7 has 927073.11 remaining balance.
-Citizen 8 has 1060715.49 remaining balance.
-Citizen 9 has 924916.43 remaining balance.
-Citizen 10 has 831633.90 remaining balance.
-After adding 203558.95 to each citizen, "Convention_Center" is chosen.
+Chosen project: Public_Transport
+Amount added to each citizen: 527603.83
+Citizen 1 has 1672438.76 remaining balance.
+Citizen 2 has 0.00 remaining balance.
+Citizen 3 has 0.00 remaining balance.
+Citizen 4 has 527603.83 remaining balance.
+Citizen 5 has 0.00 remaining balance.
+Citizen 6 has 527603.83 remaining balance.
+Citizen 7 has 0.00 remaining balance.
+Citizen 8 has 1672438.76 remaining balance.
+Citizen 9 has 0.00 remaining balance.
+Citizen 10 has 527603.83 remaining balance.
+After adding 527603.83 to each citizen, "Public_Transport" is chosen.
 
 ======================================================================
 Round 56
@@ -2792,19 +2793,19 @@ Project Water_Treatment has no supporters, or is already funded.
 Project Wetlands_Restoration has no supporters, or is already funded.
 Project Women_Shelter has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: Hospital_Wing
-Amount added to each citizen: 93444.10
-Citizen 1 has 1095799.38 remaining balance.
-Citizen 2 has 646027.47 remaining balance.
-Citizen 3 has 881062.02 remaining balance.
-Citizen 4 has 897266.90 remaining balance.
-Citizen 5 has 953700.45 remaining balance.
-Citizen 6 has 897724.13 remaining balance.
-Citizen 7 has 927073.11 remaining balance.
-Citizen 8 has 1154159.59 remaining balance.
-Citizen 9 has 924916.43 remaining balance.
-Citizen 10 has 925078.00 remaining balance.
-After adding 93444.10 to each citizen, "Hospital_Wing" is chosen.
+Chosen project: Observatory
+Amount added to each citizen: 936198.08
+Citizen 1 has 2608636.85 remaining balance.
+Citizen 2 has 936198.08 remaining balance.
+Citizen 3 has 936198.08 remaining balance.
+Citizen 4 has 1463801.92 remaining balance.
+Citizen 5 has 936198.08 remaining balance.
+Citizen 6 has 1463801.92 remaining balance.
+Citizen 7 has 936198.08 remaining balance.
+Citizen 8 has 2608636.85 remaining balance.
+Citizen 9 has 0.00 remaining balance.
+Citizen 10 has 0.00 remaining balance.
+After adding 936198.08 to each citizen, "Observatory" is chosen.
 
 ======================================================================
 Round 57
@@ -2832,7 +2833,6 @@ Project Food_Bank has no supporters, or is already funded.
 Project Green_Roof_Project has no supporters, or is already funded.
 Project Historic_Preservation has no supporters, or is already funded.
 Project Homeless_Support has no supporters, or is already funded.
-Project Hospital_Wing has no supporters, or is already funded.
 Project Innovation_Lab has no supporters, or is already funded.
 Project Language_Center has no supporters, or is already funded.
 Project Makerspace has no supporters, or is already funded.
@@ -2840,6 +2840,7 @@ Project Medical_Clinic has no supporters, or is already funded.
 Project Meditation_Garden has no supporters, or is already funded.
 Project Music_School has no supporters, or is already funded.
 Project New_Library has no supporters, or is already funded.
+Project Observatory has no supporters, or is already funded.
 Project Pedestrian_Bridge has no supporters, or is already funded.
 Project Playground_East has no supporters, or is already funded.
 Project Police_Station has no supporters, or is already funded.
@@ -2865,19 +2866,19 @@ Project Water_Treatment has no supporters, or is already funded.
 Project Wetlands_Restoration has no supporters, or is already funded.
 Project Women_Shelter has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
-Chosen project: Observatory
-Amount added to each citizen: 275002.78
-Citizen 1 has 1370802.17 remaining balance.
-Citizen 2 has 921030.26 remaining balance.
-Citizen 3 has 1156064.81 remaining balance.
-Citizen 4 has 1172269.69 remaining balance.
-Citizen 5 has 1228703.23 remaining balance.
-Citizen 6 has 1172726.91 remaining balance.
-Citizen 7 has 1202075.89 remaining balance.
-Citizen 8 has 1429162.37 remaining balance.
-Citizen 9 has 924916.43 remaining balance.
-Citizen 10 has 925078.00 remaining balance.
-After adding 275002.78 to each citizen, "Observatory" is chosen.
+Chosen project: Hospital_Wing
+Amount added to each citizen: 211041.53
+Citizen 1 has 2819678.38 remaining balance.
+Citizen 2 has 0.00 remaining balance.
+Citizen 3 has 0.00 remaining balance.
+Citizen 4 has 1674843.45 remaining balance.
+Citizen 5 has 0.00 remaining balance.
+Citizen 6 has 1674843.45 remaining balance.
+Citizen 7 has 0.00 remaining balance.
+Citizen 8 has 2819678.38 remaining balance.
+Citizen 9 has 0.00 remaining balance.
+Citizen 10 has 211041.53 remaining balance.
+After adding 211041.53 to each citizen, "Hospital_Wing" is chosen.
 
 ======================================================================
 Round 58
@@ -2940,18 +2941,18 @@ Project Wetlands_Restoration has no supporters, or is already funded.
 Project Women_Shelter has no supporters, or is already funded.
 Project Youth_Center has no supporters, or is already funded.
 Chosen project: Addiction_Treatment
-Amount added to each citizen: 117924.11
-Citizen 1 has 1488726.28 remaining balance.
-Citizen 2 has 1038954.37 remaining balance.
-Citizen 3 has 1273988.92 remaining balance.
-Citizen 4 has 1290193.80 remaining balance.
-Citizen 5 has 1346627.34 remaining balance.
-Citizen 6 has 1290651.02 remaining balance.
-Citizen 7 has 1202075.89 remaining balance.
-Citizen 8 has 1547086.48 remaining balance.
-Citizen 9 has 1042840.55 remaining balance.
-Citizen 10 has 1043002.11 remaining balance.
-After adding 117924.11 to each citizen, "Addiction_Treatment" is chosen.
+Amount added to each citizen: 1320000.00
+Citizen 1 has 4139678.38 remaining balance.
+Citizen 2 has 1320000.00 remaining balance.
+Citizen 3 has 1320000.00 remaining balance.
+Citizen 4 has 2994843.45 remaining balance.
+Citizen 5 has 1320000.00 remaining balance.
+Citizen 6 has 2994843.45 remaining balance.
+Citizen 7 has 0.00 remaining balance.
+Citizen 8 has 4139678.38 remaining balance.
+Citizen 9 has 1320000.00 remaining balance.
+Citizen 10 has 1531041.53 remaining balance.
+After adding 1320000.00 to each citizen, "Addiction_Treatment" is chosen.
 
 ======================================================================
 Round 59
@@ -3085,5 +3086,5 @@ No project can be selected.
 Final Summary: 60 projects were funded
 ======================================================================
 
-[Done] exited with code=0 in 0.08 seconds
+[Done] exited with code=0 in 0.078 seconds
 """
