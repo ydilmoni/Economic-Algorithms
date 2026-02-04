@@ -1,0 +1,3 @@
+# פתרונון מטלות אלגוריתמים כלכליים
+### מרצה: אראל סגל
+[לאתר הקורס](https://github.com/erelsgl-at-ariel/algorithms-5786/tree/main)
