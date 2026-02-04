@@ -4,7 +4,7 @@
 
 ## מטלות
 
-1. [מטלה 1 – Fair Cake Cutting](‏‏EX1-fair-cake-cutting/פתרון מטלה 1 אלגו׳ כלכליים.pdf)
+1. [מטלה 1 – Fair Cake Cutting](EX1-fair-cake-cutting/פתרון מטלה 1 אלגו׳ כלכליים.pdf)
 2. [מטלה 2 – Pareto Efficiency](EX2-pareto-efficiency/פתרון%20מטלה%202%20אלגוריתמים%20כלכליים.pdf)
 3. [מטלה 3 – Efficient Item Allocation](EX3-efficient-item-allocation/פתרון%20מטלה%203%20אלגוריתמים%20כלכליים.pdf)
 4. [מטלה 4 – Item Allocation with Money](EX4-item-allocation-with-money/פתרון%20מטלה%204%20אלגוריתמים%20כלכליים.pdf)
